@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>GPLT团体程序设计天梯赛分类练习3：树</title>
+    <link href="/%E9%A2%98%E8%A7%A3/GPLT/GPLT-Tree/"/>
+    <url>/%E9%A2%98%E8%A7%A3/GPLT/GPLT-Tree/</url>
+    
+    
+    <categories>
+      
+      <category>题解</category>
+      
+      <category>GPLT</category>
+      
+      <category>分类练习</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>GPLT</tag>
+      
+      <tag>树</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>GPLT团体程序设计天梯赛分类练习2：排序+栈+队列</title>
     <link href="/%E9%A2%98%E8%A7%A3/GPLT/GPLT-Sort-Stack-Queue/"/>
     <url>/%E9%A2%98%E8%A7%A3/GPLT/GPLT-Sort-Stack-Queue/</url>
@@ -22,7 +51,7 @@
     
     <tags>
       
-      <tag>字符串</tag>
+      <tag>模拟</tag>
       
       <tag>GPLT</tag>
       
