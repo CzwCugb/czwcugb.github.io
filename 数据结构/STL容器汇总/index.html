@@ -30,7 +30,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://czwcugb.github.io/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/STL%E5%AE%B9%E5%99%A8%E6%B1%87%E6%80%BB/70.png">
 <meta property="article:published_time" content="2025-01-12T15:27:13.000Z">
-<meta property="article:modified_time" content="2025-04-05T14:22:22.965Z">
+<meta property="article:modified_time" content="2025-04-06T07:53:47.645Z">
 <meta property="article:author" content="ChenZhiwei">
 <meta property="article:tag" content="STL">
 <meta name="twitter:card" content="summary_large_image">
@@ -76,7 +76,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"czwcugb.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":false};
+    var CONFIG = {"hostname":"czwcugb.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -227,7 +227,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          4.2k 字
+          4.3k 字
         
       </span>
     
@@ -238,7 +238,7 @@
         
         
         
-          36 分钟
+          37 分钟
         
       </span>
     
@@ -1066,7 +1066,7 @@ style="text-align: left;">在当前字符串的pos索引位置开始，查找最
 <ul>
 <li>stable_sort使用方法和sort一样，但排序时不会改变相等元素的相对位置，是稳定排序</li>
 </ul>
-<h1 id="stl函数">STL函数：</h1>
+<h1 id="stl函数">STL函数</h1>
 <h2 id="有序序列的二分查找">有序序列的二分查找</h2>
 <p><a
 target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_28712713/article/details/80922917">45
@@ -1077,10 +1077,14 @@ lowbound-CSDN博客</a></p>
 <p>找得到返回1，找不到返回0</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-type">int</span> a[] = &#123;<span class="hljs-number">12</span>, <span class="hljs-number">45</span>, <span class="hljs-number">3</span>, <span class="hljs-number">98</span>, <span class="hljs-number">21</span>, <span class="hljs-number">7</span>&#125;;<br><span class="hljs-built_in">sort</span>(a, a<span class="hljs-number">+6</span>);<br>cout &lt;&lt; <span class="hljs-string">&quot;result:&quot;</span> &lt;&lt; <span class="hljs-built_in">binary_search</span>(a, a<span class="hljs-number">+6</span>, <span class="hljs-number">12</span>) &lt;&lt; endl;<span class="hljs-comment">//1</span><br>cout &lt;&lt; <span class="hljs-string">&quot;result:&quot;</span> &lt;&lt; <span class="hljs-built_in">binary_search</span>(a, a<span class="hljs-number">+6</span>, <span class="hljs-number">77</span>) &lt;&lt; endl;<span class="hljs-comment">//0</span><br></code></pre></td></tr></table></figure>
 <p>如果sort中使用了自定义排序规则，binary_search里一样要引用该参数</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">struct</span> <span class="hljs-title class_">Rule</span> &#123;<br>    <span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">operator</span><span class="hljs-params">()</span><span class="hljs-params">(<span class="hljs-type">const</span> <span class="hljs-type">int</span> &amp; a1, <span class="hljs-type">const</span> <span class="hljs-type">int</span> &amp; a2)</span> <span class="hljs-type">const</span></span>&#123;<br>        <span class="hljs-keyword">return</span> a1%<span class="hljs-number">10</span> &lt; a2%<span class="hljs-number">10</span>;<br>    &#125;<br>&#125;;<br><span class="hljs-type">int</span> a[] = &#123;<span class="hljs-number">12</span>, <span class="hljs-number">45</span>, <span class="hljs-number">3</span>, <span class="hljs-number">98</span>, <span class="hljs-number">21</span>, <span class="hljs-number">7</span>&#125;;<br><span class="hljs-built_in">sort</span>(a, a<span class="hljs-number">+6</span>, <span class="hljs-built_in">Rule</span>());<br>cout &lt;&lt; <span class="hljs-string">&quot;result:&quot;</span> &lt;&lt; <span class="hljs-built_in">binary_search</span>(a, a<span class="hljs-number">+6</span>, <span class="hljs-number">8</span>, <span class="hljs-built_in">Rule</span>()) &lt;&lt; endl;<br></code></pre></td></tr></table></figure>
+<p>结构体写法：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">struct</span> <span class="hljs-title class_">Rule</span> &#123;<br>    <span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">operator</span><span class="hljs-params">()</span><span class="hljs-params">(<span class="hljs-type">const</span> <span class="hljs-type">int</span> &amp; a1, <span class="hljs-type">const</span> <span class="hljs-type">int</span> &amp; a2)</span> <span class="hljs-type">const</span></span>&#123;<br>        <span class="hljs-keyword">return</span> a1%<span class="hljs-number">10</span> &lt; a2%<span class="hljs-number">10</span>;<br>    &#125;<br>&#125;;<br><span class="hljs-type">int</span> a[] = &#123;<span class="hljs-number">12</span>, <span class="hljs-number">45</span>, <span class="hljs-number">3</span>, <span class="hljs-number">98</span>, <span class="hljs-number">21</span>, <span class="hljs-number">7</span>&#125;;<br><span class="hljs-built_in">sort</span>(a, a<span class="hljs-number">+6</span>, <span class="hljs-built_in">Rule</span>());<br>cout &lt;&lt; <span class="hljs-string">&quot;result:&quot;</span> &lt;&lt; <span class="hljs-built_in">binary_search</span>(a, a<span class="hljs-number">+6</span>, <span class="hljs-number">8</span>, <span class="hljs-built_in">Rule</span>()) &lt;&lt; endl;<br><span class="hljs-comment">// 注意：这里查找的是 x % 10 == 8, 而不是 x == 8；</span><br></code></pre></td></tr></table></figure>
+<p>函数写法：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">cmp</span><span class="hljs-params">(<span class="hljs-type">const</span> <span class="hljs-type">int</span> &amp; a1, <span class="hljs-type">const</span> <span class="hljs-type">int</span> &amp; a2)</span> </span>&#123;<br>	<span class="hljs-keyword">return</span> a1%<span class="hljs-number">10</span> &lt; a2%<span class="hljs-number">10</span>;<br>&#125;;<br><br><span class="hljs-type">int</span> a[] = &#123;<span class="hljs-number">12</span>, <span class="hljs-number">45</span>, <span class="hljs-number">3</span>, <span class="hljs-number">98</span>, <span class="hljs-number">21</span>, <span class="hljs-number">7</span>&#125;;<br><span class="hljs-built_in">sort</span>(a, a<span class="hljs-number">+6</span>, cmp);<br>cout &lt;&lt; <span class="hljs-string">&quot;result:&quot;</span> &lt;&lt; <span class="hljs-built_in">binary_search</span>(a, a<span class="hljs-number">+6</span>, <span class="hljs-number">8</span>, cmp) &lt;&lt; endl;<br></code></pre></td></tr></table></figure>
 <p><strong>2.lower_bound、upper_bound</strong></p>
 <p>使用方法和bianry_search一样，lower_bound返回的是一个 &gt;=
 查找元素的迭代器/指针，upper_bound为 &gt; 。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">cmp</span><span class="hljs-params">(<span class="hljs-type">const</span> <span class="hljs-type">int</span> &amp; a1, <span class="hljs-type">const</span> <span class="hljs-type">int</span> &amp; a2)</span> </span>&#123;<br>	<span class="hljs-keyword">return</span> a1%<span class="hljs-number">10</span> &lt; a2%<span class="hljs-number">10</span>;<br>&#125;;<br><br><span class="hljs-type">int</span> a[] = &#123;<span class="hljs-number">12</span>, <span class="hljs-number">45</span>, <span class="hljs-number">3</span>, <span class="hljs-number">98</span>, <span class="hljs-number">21</span>, <span class="hljs-number">7</span>&#125;;<br><span class="hljs-built_in">sort</span>(a, a<span class="hljs-number">+6</span>, cmp);<br>cout &lt;&lt; <span class="hljs-string">&quot;result:&quot;</span> &lt;&lt; *<span class="hljs-built_in">lower_bound</span>(a, a<span class="hljs-number">+6</span>, <span class="hljs-number">8</span>, cmp) &lt;&lt; endl;<br></code></pre></td></tr></table></figure>
 <h2 id="getline">getline</h2>
 <p><strong>读入字符串，遇空格，回车结束</strong></p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cpp">string s; cin &gt;&gt; s;<br></code></pre></td></tr></table></figure>
@@ -1223,9 +1227,9 @@ id="set_unionintersectiondifference并集交集差集">set_union/intersection/di
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/LIS%E5%92%8CLCS/" title="算法笔记：LIS和LCS">
+                      <a href="/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/LIS%E5%92%8CLCS/" title="LIS和LCS">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">算法笔记：LIS和LCS</span>
+                        <span class="hidden-mobile">LIS和LCS</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -1233,8 +1237,8 @@ id="set_unionintersectiondifference并集交集差集">set_union/intersection/di
                   <article class="post-next col-6">
                     
                     
-                      <a href="/%E5%9B%BE%E8%AE%BA/%E5%B9%B6%E6%9F%A5%E9%9B%86/" title="并查集">
-                        <span class="hidden-mobile">并查集</span>
+                      <a href="/%E5%9B%BE%E8%AE%BA/LCA%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/" title="LCA最近公共祖先">
+                        <span class="hidden-mobile">LCA最近公共祖先</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
