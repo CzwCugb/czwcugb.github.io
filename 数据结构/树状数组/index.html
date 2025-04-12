@@ -21,22 +21,24 @@
   <meta name="author" content="ChenZhiwei">
   <meta name="keywords" content="">
   
-    <meta name="description" content="几种常见的质数判断方法，包括：枚举法、埃式筛法和欧拉筛法">
+    <meta name="description" content="树状数组">
 <meta property="og:type" content="article">
-<meta property="og:title" content="质数筛">
-<meta property="og:url" content="https://czwcugb.github.io/%E6%95%B0%E8%AE%BA/%E8%B4%A8%E6%95%B0%E7%AD%9B/index.html">
+<meta property="og:title" content="树状数组">
+<meta property="og:url" content="https://czwcugb.github.io/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/index.html">
 <meta property="og:site_name" content="陈志伟的个人博客">
-<meta property="og:description" content="几种常见的质数判断方法，包括：枚举法、埃式筛法和欧拉筛法">
+<meta property="og:description" content="树状数组">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-01-12T05:39:13.000Z">
-<meta property="article:modified_time" content="2025-04-10T15:40:21.906Z">
+<meta property="og:image" content="https://czwcugb.github.io/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/fenwick-tree-8.jpg">
+<meta property="article:published_time" content="2025-04-12T11:31:13.000Z">
+<meta property="article:modified_time" content="2025-04-12T11:31:34.814Z">
 <meta property="article:author" content="ChenZhiwei">
-<meta property="article:tag" content="数论">
+<meta property="article:tag" content="树状数组">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://czwcugb.github.io/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/fenwick-tree-8.jpg">
   
   
   
-  <title>质数筛 - 陈志伟的个人博客</title>
+  <title>树状数组 - 陈志伟的个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -202,7 +204,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="质数筛"></span>
+            <span id="subtitle" data-typed-text="树状数组"></span>
           
         </div>
 
@@ -213,8 +215,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-01-12 13:39" pubdate>
-          2025年1月12日 下午
+        <time datetime="2025-04-12 19:31" pubdate>
+          2025年4月12日 晚上
         </time>
       </span>
     
@@ -225,7 +227,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          484 字
+          394 字
         
       </span>
     
@@ -236,7 +238,7 @@
         
         
         
-          5 分钟
+          4 分钟
         
       </span>
     
@@ -273,41 +275,53 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">质数筛</h1>
+            <h1 id="seo-header">树状数组</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="枚举法">枚举法</h1>
-<blockquote>
-<p>暴力枚举法， 一般在查询很少的时候使用</p>
-</blockquote>
-<p>判断一个数 n 是否为质数的时间复杂度为<span
-class="math inline">\(O(\sqrt{n})\)</span></p>
-<p>若询问m次，时间复杂度为 <span
-class="math inline">\(O(m\sqrt{n})\)</span></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">isPrime</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span></span>&#123;<br>	<span class="hljs-keyword">if</span>(x &lt; <span class="hljs-number">2</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">2</span> ; i*i &lt;= x ; i ++)&#123;<br>		<span class="hljs-keyword">if</span>(x % i == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>	&#125;<br>	<span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
-<h1 id="埃式筛法">埃式筛法</h1>
-<blockquote>
-<p>Eratosthenes 筛法（埃拉托斯特尼筛法，简称埃氏筛法。</p>
-</blockquote>
-<p>建立一个&lt;=n的<span
-class="math inline">\(O(1)\)</span>查询表的时间复杂度是<span
-class="math inline">\(O(nloglogn)\)</span></p>
-<p>原理：对于任意一个大于1的正整数，那么它的x倍就是非素数。如果从小到大遍历每个数，同时把当前数的所有倍数记为非素数，那么运行结束的时候没有被标记的数就是素数了。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs cpp">vector&lt;<span class="hljs-type">bool</span>&gt; isPrime;<br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">initPrime</span><span class="hljs-params">(<span class="hljs-type">int</span> n)</span></span>&#123;<br>	isPrime.<span class="hljs-built_in">resize</span>(n<span class="hljs-number">+1</span>, <span class="hljs-literal">true</span>);<br>	isPrime[<span class="hljs-number">0</span>] = isPrime[<span class="hljs-number">1</span>] = <span class="hljs-literal">false</span>;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">2</span> ; i &lt;= n ; i ++)&#123; <br>		<span class="hljs-keyword">if</span>(isPrime[i])&#123;<br>			<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j = i*i ; j &lt;= n ; j += i)&#123;<br>                <span class="hljs-comment">// 注意这里可以从i*i开始,而不是2*i</span><br>                <span class="hljs-comment">// 因为所有因数为 [2, i-1] 的乘积都已经被计算过；</span><br>				isPrime[j] = <span class="hljs-literal">false</span>;<br>			&#125;<br>		&#125;<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-<h1 id="欧拉筛法">欧拉筛法</h1>
-<blockquote>
-<p>埃氏筛法仍有优化空间，它会将一个合数重复多次标记。</p>
-<p>而欧拉筛法保证了一个合数只被最小的素因数标记，达到了线性的时间复杂度</p>
-</blockquote>
-<p>建立一个&lt;=n的<span
-class="math inline">\(O(1)\)</span>查询表的时间复杂度是<span
-class="math inline">\(O(n)\)</span></p>
-<p>原理：从小到大遍历每个数，记录&lt;= i的非素数，将它们与 i
-的乘积（&lt;=n）标记为非素数，若i % it ==
-0，则直接break，因为后面还会有更大倍数标记这个乘积。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs cpp">vector&lt;<span class="hljs-type">bool</span>&gt; isPrime;<br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">initPrime</span><span class="hljs-params">(<span class="hljs-type">int</span> n)</span></span>&#123;<br>	isPrime.<span class="hljs-built_in">resize</span>(n<span class="hljs-number">+1</span>, <span class="hljs-literal">true</span>);<br>	isPrime[<span class="hljs-number">0</span>] = isPrime[<span class="hljs-number">1</span>] = <span class="hljs-literal">false</span>;<br>    vector&lt;<span class="hljs-type">int</span> &gt; pri;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">2</span> ; i &lt;= n ; i ++)&#123;<br>		<span class="hljs-keyword">if</span>(isPrime[i])&#123;<br>			pri.<span class="hljs-built_in">push_back</span>(i);<br>		&#125;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">auto</span> it : pri)&#123;<br>			<span class="hljs-keyword">if</span>(i*it &gt; n) <span class="hljs-keyword">break</span>;<br>			isPrime[i*it] = <span class="hljs-literal">false</span>;<br>			<span class="hljs-keyword">if</span>(i % it == <span class="hljs-number">0</span>) <span class="hljs-keyword">break</span>; <span class="hljs-comment">//关键</span><br>		&#125;<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+                <h1 id="树状数组">树状数组</h1>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>下标修改</th>
+<th>区间和查询</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>普通数组</td>
+<td><span class="math inline">\(O(1)\)</span></td>
+<td><span class="math inline">\(O(N)\)</span></td>
+</tr>
+<tr>
+<td>前缀和数组</td>
+<td><span class="math inline">\(O(N)\)</span></td>
+<td><span class="math inline">\(O(1)\)</span></td>
+</tr>
+<tr>
+<td>树状数组</td>
+<td><span class="math inline">\(O(logN)\)</span></td>
+<td><span class="math inline">\(O(logN)\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>对于普通数组，区间和查询的复杂度较高；</p>
+<p>前缀和数组虽然能优化区间和查询，但是下标修改的复杂度较高；</p>
+<p>树状数组是一种居中策略，两种操作复杂度都为O(logN)。</p>
+<img src="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/fenwick-tree-8.jpg" srcset="/img/loading.gif" lazyload class="" title="img">
+<p>（图片来源：<a
+target="_blank" rel="noopener" href="https://www.acwing.com/blog/content/80/">树状数组学习笔记 -
+AcWing</a>）</p>
+<p>设 树状数组 为 c，c[i]表示[i - lowbit(i) + 1, i]区间的和。</p>
+<p>1）更新数组：对a[i]更新k，对i 不断加上lowbit(i)，更新每个对应的c[i],
+直到上界N；</p>
+<p>2）查询区间和： [1, i ]的区间和，依次减去lowbit(i),
+直到i等于0即可；</p>
+<p>模板题：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3374">P3374
+【模板】树状数组 1 - 洛谷</a></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-type">const</span> <span class="hljs-type">int</span> maxn = <span class="hljs-number">5e5</span> + <span class="hljs-number">10</span>;<br><br><span class="hljs-type">int</span> n,m;<br><span class="hljs-type">int</span> a[maxn],f[maxn]; <span class="hljs-comment">// 注意a数组不是必要的</span><br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">lowbit</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span></span>&#123;<br>	<span class="hljs-comment">// return x &amp; (~x + 1)</span><br>	<span class="hljs-keyword">return</span> x&amp;(-x);<br>&#125;<br><br><span class="hljs-comment">// a[x] += k, 并更新f数组</span><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">update</span><span class="hljs-params">(<span class="hljs-type">int</span> x, <span class="hljs-type">int</span> k)</span></span>&#123;<br>	a[x] += k;<br>	<span class="hljs-keyword">while</span>(x &lt;= n)&#123;<br>		f[x] += k;<br>		x += <span class="hljs-built_in">lowbit</span>(x);<br>	&#125;<br>&#125;<br><br><span class="hljs-comment">// 求a[1-x]的和</span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">getSum</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span></span>&#123;<br>	<span class="hljs-type">int</span> res = <span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">while</span>(x)&#123;<br>		res += f[x];<br>		x -= <span class="hljs-built_in">lowbit</span>(x);<br>	&#125;<br>	<span class="hljs-keyword">return</span> res;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">init</span><span class="hljs-params">()</span></span>&#123;<br>	cin&gt;&gt;n&gt;&gt;m;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span> ; i &lt;= n ; i ++)&#123;<br>		<span class="hljs-type">int</span> v; cin&gt;&gt;v;<br>		<span class="hljs-built_in">update</span>(i, v);<br>	&#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">()</span></span>&#123;<br>	<span class="hljs-type">int</span> op; cin&gt;&gt;op;<br>	<span class="hljs-keyword">if</span>(op == <span class="hljs-number">1</span>)&#123;<br>		<span class="hljs-type">int</span> x, k; cin&gt;&gt;x&gt;&gt;k;<br>		<span class="hljs-built_in">update</span>(x, k);<br>	&#125;<span class="hljs-keyword">else</span>&#123;<br>		<span class="hljs-type">int</span> x, y; cin&gt;&gt;x&gt;&gt;y;<br>		cout&lt;&lt;<span class="hljs-built_in">getSum</span>(y) - <span class="hljs-built_in">getSum</span>(x<span class="hljs-number">-1</span>)&lt;&lt;<span class="hljs-string">&quot;\n&quot;</span>;<br>	&#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span></span>&#123;<br>	cin.<span class="hljs-built_in">tie</span>(<span class="hljs-number">0</span>), cout.<span class="hljs-built_in">tie</span>(<span class="hljs-number">0</span>), ios::<span class="hljs-built_in">sync_with_stdio</span>(<span class="hljs-literal">false</span>);<br>	<span class="hljs-built_in">init</span>();<br>	<span class="hljs-keyword">while</span>(m--)&#123;<br>		<span class="hljs-built_in">solve</span>();<br>	&#125;<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 
                 
               </div>
@@ -331,7 +345,7 @@ class="math inline">\(O(n)\)</span></p>
   
     <span>></span>
     
-  <a href="/categories/%E7%AC%94%E8%AE%B0/%E6%95%B0%E8%AE%BA/" class="category-chain-item">数论</a>
+  <a href="/categories/%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="category-chain-item">数据结构</a>
   
   
 
@@ -348,7 +362,7 @@ class="math inline">\(O(n)\)</span></p>
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E6%95%B0%E8%AE%BA/" class="print-no-link">#数论</a>
+        <a href="/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/" class="print-no-link">#树状数组</a>
       
     </div>
   
@@ -360,8 +374,8 @@ class="math inline">\(O(n)\)</span></p>
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>质数筛</div>
-      <div>https://czwcugb.github.io/数论/质数筛/</div>
+      <div>树状数组</div>
+      <div>https://czwcugb.github.io/数据结构/树状数组/</div>
     </div>
     <div class="license-meta">
       
@@ -373,7 +387,7 @@ class="math inline">\(O(n)\)</span></p>
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年1月12日</div>
+          <div>2025年4月12日</div>
         </div>
       
       
@@ -405,15 +419,15 @@ class="math inline">\(O(n)\)</span></p>
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%AE%97%E6%B3%95%E5%90%88%E9%9B%86/" title="二叉树算法合集">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">二叉树算法合集</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/%E5%88%86%E6%B2%BB/ST%E8%A1%A8/" title="ST表维护区间最值">
+                        <span class="hidden-mobile">ST表维护区间最值</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
