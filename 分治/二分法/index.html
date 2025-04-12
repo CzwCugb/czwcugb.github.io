@@ -21,22 +21,22 @@
   <meta name="author" content="ChenZhiwei">
   <meta name="keywords" content="">
   
-    <meta name="description" content="平面最近点对-模板">
+    <meta name="description" content="二分思想可以理解成是对枚举的一种优化，假设一个问题的解分布在01区间里，而这种解与某种递增变量有联系。那么，我们可以通过枚举这个变量来得到正解。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="平面最近点对">
-<meta property="og:url" content="https://czwcugb.github.io/%E5%88%86%E6%B2%BB%E3%80%81%E5%87%8F%E6%B2%BB/%E5%B9%B3%E9%9D%A2%E6%9C%80%E8%BF%91%E7%82%B9%E5%AF%B9/index.html">
+<meta property="og:title" content="二分法">
+<meta property="og:url" content="https://czwcugb.github.io/%E5%88%86%E6%B2%BB/%E4%BA%8C%E5%88%86%E6%B3%95/index.html">
 <meta property="og:site_name" content="陈志伟的个人博客">
-<meta property="og:description" content="平面最近点对-模板">
+<meta property="og:description" content="二分思想可以理解成是对枚举的一种优化，假设一个问题的解分布在01区间里，而这种解与某种递增变量有联系。那么，我们可以通过枚举这个变量来得到正解。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-01-12T15:52:23.000Z">
-<meta property="article:modified_time" content="2025-01-14T12:17:09.683Z">
+<meta property="article:published_time" content="2025-01-12T16:26:20.000Z">
+<meta property="article:modified_time" content="2025-01-14T12:17:03.071Z">
 <meta property="article:author" content="ChenZhiwei">
 <meta property="article:tag" content="分治">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>平面最近点对 - 陈志伟的个人博客</title>
+  <title>二分法 - 陈志伟的个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -202,7 +202,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="平面最近点对"></span>
+            <span id="subtitle" data-typed-text="二分法"></span>
           
         </div>
 
@@ -213,8 +213,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-01-12 23:52" pubdate>
-          2025年1月12日 晚上
+        <time datetime="2025-01-13 00:26" pubdate>
+          2025年1月13日 凌晨
         </time>
       </span>
     
@@ -225,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          345 字
+          649 字
         
       </span>
     
@@ -236,7 +236,7 @@
         
         
         
-          3 分钟
+          6 分钟
         
       </span>
     
@@ -273,20 +273,30 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">平面最近点对</h1>
+            <h1 id="seo-header">二分法</h1>
             
             
               <div class="markdown-body">
                 
-                <p>模板题</p>
-<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1429">P1429
-平面最近点对（加强版） - 洛谷 | 计算机科学教育新生态
-(luogu.com.cn)</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P7883">P7883
-平面最近点对（加强加强版） - 洛谷 | 计算机科学教育新生态
-(luogu.com.cn)</a></p>
-<h1 id="题解">题解</h1>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-type">const</span> <span class="hljs-type">int</span> MAX = <span class="hljs-number">400010</span>;<br><br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">point</span>&#123;<br>	<span class="hljs-type">double</span> x,y;<br>&#125;p[MAX];<br><br><span class="hljs-type">int</span> n;<br><span class="hljs-type">double</span> ans;<br><br><span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">equal</span><span class="hljs-params">(<span class="hljs-type">double</span> a, <span class="hljs-type">double</span> b)</span></span>&#123;<br>	<span class="hljs-keyword">return</span> <span class="hljs-built_in">fabs</span>(a - b) &lt;= <span class="hljs-number">1e-6</span>;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">cmpx</span><span class="hljs-params">(point &amp;a, point &amp;b)</span></span>&#123; <span class="hljs-comment">//按x排序</span><br>	<span class="hljs-keyword">if</span>(!<span class="hljs-built_in">equal</span>(a.x, b.x)) <span class="hljs-keyword">return</span> a.x &lt; b.x;<br>	<span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> a.y &lt; b.y;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">cmpy</span><span class="hljs-params">(point &amp;a, point &amp;b)</span></span>&#123; <span class="hljs-comment">//按y排序</span><br>	<span class="hljs-keyword">return</span> a.y &lt; b.y;	<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">double</span> <span class="hljs-title">dist</span><span class="hljs-params">(point &amp;a, point &amp;b)</span></span>&#123; <br>	<span class="hljs-keyword">return</span> <span class="hljs-built_in">sqrt</span>( (a.x-b.x)*(a.x-b.x) + (a.y-b.y)*(a.y-b.y) );<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">double</span> <span class="hljs-title">solve</span><span class="hljs-params">(<span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r)</span></span>&#123;<br>	<span class="hljs-type">double</span> res = <span class="hljs-number">1e300</span>;<br>	<span class="hljs-keyword">if</span>(l==r)&#123;<br>		<span class="hljs-keyword">return</span> res;<br>	&#125;<span class="hljs-keyword">else</span>&#123;<br>		<span class="hljs-type">int</span> mid = (l+r)/<span class="hljs-number">2</span>;<br>		<span class="hljs-type">double</span> midx = p[mid].x;<br>		res = <span class="hljs-built_in">min</span>(res, <span class="hljs-built_in">solve</span>(l, mid)); <span class="hljs-comment">//左侧最小距离</span><br>		res = <span class="hljs-built_in">min</span>(res, <span class="hljs-built_in">solve</span>(mid<span class="hljs-number">+1</span>, r)); <span class="hljs-comment">//右侧最小距离</span><br>        <span class="hljs-comment">//两点分别位于左右两侧的最小距离</span><br>		vector&lt;point&gt; v;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = l ; i &lt;= r ; i ++)&#123;<br>			<span class="hljs-keyword">if</span>(<span class="hljs-built_in">fabs</span>(p[i].x - midx) &lt;= res)&#123;<br>				v.<span class="hljs-built_in">push_back</span>(p[i]);<br>			&#125;<br>		&#125;<br>		<span class="hljs-built_in">sort</span>(v.<span class="hljs-built_in">begin</span>(),v.<span class="hljs-built_in">end</span>(),cmpy);<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span> ; i &lt; v.<span class="hljs-built_in">size</span>() ; i ++)&#123;<br>			<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j = i<span class="hljs-number">+1</span> ; j &lt; v.<span class="hljs-built_in">size</span>() &amp;&amp; v[j].y - v[i].y &lt; res; j ++)&#123;<br>				res = <span class="hljs-built_in">min</span>(<span class="hljs-built_in">dist</span>(v[i], v[j]), res);<br>			&#125;<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">return</span> res;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span></span>&#123;<br>	<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;n);<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span> ; i &lt; n ; i ++)&#123;<br>		<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lf %lf&quot;</span>, &amp;p[i].x , &amp;p[i].y);<br>	&#125;<br>	<span class="hljs-built_in">sort</span>(p,p+n, cmpx);<br>	ans = <span class="hljs-built_in">solve</span>(<span class="hljs-number">0</span>, n<span class="hljs-number">-1</span>);<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%.lf&quot;</span>, ans*ans);<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+                <h1 id="前言">前言</h1>
+<p>二分思想可以理解成是对枚举的一种优化，假设一个问题的解分布在01区间里，而这种解与某种递增变量有联系。那么，我们可以通过枚举这个变量来得到正解。暴力枚举的方法效率较低，而二分查找优化了这一枚举过程。</p>
+<ul>
+<li>二分题目的关键词：最xx的最xx，比如：最大的最近距离是多少?</li>
+</ul>
+<h1 id="整数二分模板">整数二分模板</h1>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">//关于模板的一些说明：</span><br><span class="hljs-comment">//对于数组 arr[10] = &#123;1,4,5,6,6,6,7,8,9,10&#125;;</span><br><span class="hljs-comment">//若要找到同样满足check的情况下，下标较大者，应该以l为答案</span><br><span class="hljs-comment">//此时查找区间为[l,r-1]</span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span></span>&#123;<br>	<span class="hljs-type">int</span> l = <span class="hljs-number">0</span>;<br>	<span class="hljs-type">int</span> r = <span class="hljs-number">10</span>;<br>	<span class="hljs-type">int</span> x = <span class="hljs-number">6</span>;<br>	<span class="hljs-keyword">while</span>(l<span class="hljs-number">+1</span> != r)&#123;<br>		<span class="hljs-type">int</span> mid = (l+r)/<span class="hljs-number">2</span>;<br>		<span class="hljs-keyword">if</span>(arr[mid] &lt;= x) l = mid;<br>		<span class="hljs-keyword">else</span> r = mid;<br>	&#125;<br>	cout&lt;&lt;l; <span class="hljs-comment">//5</span><br>&#125;<br><span class="hljs-comment">//若要找到同样满足check的情况下，下标较小者，应该以r为答案</span><br><span class="hljs-comment">//此时查找区间为[l+1,r]</span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span></span>&#123;<br>	<span class="hljs-type">int</span> l = <span class="hljs-number">-1</span>;<br>	<span class="hljs-type">int</span> r = <span class="hljs-number">9</span>;<br>	<span class="hljs-type">int</span> x = <span class="hljs-number">6</span>;<br>	<span class="hljs-keyword">while</span>(l<span class="hljs-number">+1</span> != r)&#123;<br>		<span class="hljs-type">int</span> mid = (l+r)/<span class="hljs-number">2</span>;<br>		<span class="hljs-keyword">if</span>(arr[mid] &gt;= x) r = mid;<br>		<span class="hljs-keyword">else</span> l = mid;<br>	&#125;<br>	cout&lt;&lt;r; <span class="hljs-comment">//3</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<h1 id="浮点二分模板">浮点二分模板</h1>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-type">const</span> <span class="hljs-type">double</span> eps = <span class="hljs-number">1e-6</span>; <span class="hljs-comment">//设置精度</span><br><br><span class="hljs-function"><span class="hljs-type">double</span> <span class="hljs-title">f</span><span class="hljs-params">(<span class="hljs-type">const</span> <span class="hljs-type">double</span> &amp;x)</span></span>&#123;<br>	<span class="hljs-keyword">return</span> x*x + <span class="hljs-number">2</span>*x <span class="hljs-number">-1</span>;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span></span>&#123;<br>	<span class="hljs-comment">// f = x^2 + 2x -1;</span><br>	<span class="hljs-comment">// 求f(x) = m 的 x 的值</span><br>	<span class="hljs-type">double</span> l = <span class="hljs-number">0</span>;<br>	<span class="hljs-type">double</span> r = <span class="hljs-number">1e10</span>;<br>	<span class="hljs-type">double</span> m;cin&gt;&gt;m;<br>	<span class="hljs-keyword">while</span>(r-l &gt;= eps)&#123;<br>		<span class="hljs-type">double</span> mid = (r+l)/<span class="hljs-number">2</span>;<br>		<span class="hljs-keyword">if</span>(<span class="hljs-built_in">f</span>(mid) &gt; m)&#123;<br>			r = mid;<br>		&#125;<br>		<span class="hljs-keyword">else</span> l = mid;<br>	&#125;<br>	cout&lt;&lt;r; <span class="hljs-comment">//输出l或者r可以，没有太大区别</span><br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h1 id="例题1跳石头">例题1：跳石头</h1>
+<p><a
+target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/364/learning/?page=1&amp;first_category_id=1&amp;sort=students_count&amp;name=跳石头">1.跳石头
+- 蓝桥云课 (lanqiao.cn)</a></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">using</span> ll = <span class="hljs-type">long</span> <span class="hljs-type">long</span>;<br><span class="hljs-type">const</span> <span class="hljs-type">int</span> MAX = <span class="hljs-number">1e6</span>;<br><br>ll len,n,m;<br>ll rock_pos[MAX];<br><br><span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">check</span><span class="hljs-params">(<span class="hljs-type">const</span> <span class="hljs-type">int</span> &amp; x)</span></span>&#123;<br>	ll last_pos = <span class="hljs-number">0</span>;<br>	ll ans = <span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span> ; i &lt;= n ; i ++)&#123;<br>		<span class="hljs-keyword">if</span>(rock_pos[i] - last_pos &lt; x)&#123;<br>			ans++;<br>			<span class="hljs-keyword">continue</span>;<br>		&#125;<br>		last_pos = rock_pos[i];<br>	&#125;<br>	<span class="hljs-keyword">if</span>(len - last_pos &lt; x) ans++;<br>	<span class="hljs-keyword">return</span> ans &gt;= m;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span></span>&#123;<br>	cin&gt;&gt;len&gt;&gt;n&gt;&gt;m;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span> ; i &lt;= n ; i ++)&#123;<br>		cin&gt;&gt;rock_pos[i];<br>	&#125;<br>	ll l = <span class="hljs-number">0</span>;<br>	ll r = <span class="hljs-number">1e9</span> + <span class="hljs-number">5</span>;<br>	<span class="hljs-keyword">while</span>(l<span class="hljs-number">+1</span> != r)&#123;<br>		ll mid = (l+r)/<span class="hljs-number">2</span>;<br>		<span class="hljs-keyword">if</span>(<span class="hljs-built_in">check</span>(mid))&#123;<br>			r = mid;<br>		&#125;<br>		<span class="hljs-keyword">else</span> l = mid;	<br>	&#125;<br>	cout&lt;&lt;r;<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h1 id="例题2肖恩的苹果林">例题2：肖恩的苹果林</h1>
+<p><a
+target="_blank" rel="noopener" href="https://www.lanqiao.cn/problems/3683/learning/?page=1&amp;first_category_id=1&amp;sort=students_count&amp;name=肖恩的苹果林">1.肖恩的苹果林
+- 蓝桥云课 (lanqiao.cn)</a></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">using</span> ll = <span class="hljs-type">long</span> <span class="hljs-type">long</span>;<br><span class="hljs-type">const</span> <span class="hljs-type">int</span> MAX = <span class="hljs-number">1e6</span>;<br><br>ll n,m;<br>ll tree_pos[MAX];<br><br><span class="hljs-function">ll <span class="hljs-title">check</span><span class="hljs-params">(<span class="hljs-type">const</span> <span class="hljs-type">int</span> &amp; x)</span></span>&#123;<br>	ll ans = <span class="hljs-number">1</span>;<br>	ll last = tree_pos[<span class="hljs-number">1</span>];<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">2</span> ; i &lt;= n ; i ++)&#123;<br>		<span class="hljs-keyword">if</span>(tree_pos[i] - last &gt;= x)&#123;<br>			ans++;<br>			last = tree_pos[i];<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">return</span> ans;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span></span>&#123;<br>	cin&gt;&gt;n&gt;&gt;m;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span> ; i &lt;= n ; i++)&#123;<br>		cin&gt;&gt;tree_pos[i];<br>	&#125;<br>	<span class="hljs-built_in">sort</span>(tree_pos<span class="hljs-number">+1</span>,tree_pos<span class="hljs-number">+1</span>+n);<br>	ll l = <span class="hljs-number">0</span>;<br>	ll r = <span class="hljs-number">1e9</span><span class="hljs-number">+10</span>;<br>	<span class="hljs-keyword">while</span>(l<span class="hljs-number">+1</span> != r)&#123;<br>		ll mid = (l+r)/<span class="hljs-number">2</span>;<br>		<span class="hljs-keyword">if</span>(<span class="hljs-built_in">check</span>(mid) &gt;= m)&#123;<br>			l = mid;<br>		&#125;<br>		<span class="hljs-keyword">else</span> r = mid;	<br>	&#125;<br>	cout&lt;&lt;l;<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 
                 
               </div>
@@ -339,8 +349,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>平面最近点对</div>
-      <div>https://czwcugb.github.io/分治、减治/平面最近点对/</div>
+      <div>二分法</div>
+      <div>https://czwcugb.github.io/分治/二分法/</div>
     </div>
     <div class="license-meta">
       
@@ -352,7 +362,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年1月12日</div>
+          <div>2025年1月13日</div>
         </div>
       
       
@@ -384,9 +394,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95%E5%9F%BA%E7%A1%80/" title="计算几何基础">
+                      <a href="/%E5%85%B6%E4%BB%96%E7%AE%97%E6%B3%95/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/" title="进制转换">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">计算几何基础</span>
+                        <span class="hidden-mobile">进制转换</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -394,8 +404,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E7%8A%B6%E5%8E%8BDP/" title="状压DP">
-                        <span class="hidden-mobile">状压DP</span>
+                      <a href="/%E5%9B%BE%E8%AE%BA/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/" title="最小生成树">
+                        <span class="hidden-mobile">最小生成树</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
