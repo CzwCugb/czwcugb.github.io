@@ -21,24 +21,22 @@
   <meta name="author" content="ChenZhiwei">
   <meta name="keywords" content="">
   
-    <meta name="description" content="树状数组    类型 下标修改 区间和查询     普通数组 \(O(1)\) \(O(N)\)   前缀和数组 \(O(N)\) \(O(1)\)   树状数组 \(O(logN)\) \(O(logN)\)    对于普通数组，区间和查询的复杂度较高； 前缀和数组虽然能优化区间和查询，但是下标修改的复杂度较高； 树状数组是一种居中策略，">
+    <meta name="description" content="2025GPLT校内分组赛补题 摘要     题目 分值 知识点     P4711 「化学」相对分子质量 - 洛谷 25 字符串处理   圣诞彩灯计划 25 图论   数学作业 25 数论   P1194 买礼物 - 洛谷 25 最小生成树    相对分子质量 圣诞彩灯计划 圣诞前夕，小明和妹妹在装饰一棵巨大的电子圣诞树">
 <meta property="og:type" content="article">
-<meta property="og:title" content="树状数组">
-<meta property="og:url" content="https://czwcugb.github.io/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/index.html">
+<meta property="og:title" content="GPLT团体程序设计天梯赛真题训练：2025年校赛补题">
+<meta property="og:url" content="https://czwcugb.github.io/%E9%A2%98%E8%A7%A3/GPLT/2025-group-match/index.html">
 <meta property="og:site_name" content="陈志伟的个人博客">
-<meta property="og:description" content="树状数组    类型 下标修改 区间和查询     普通数组 \(O(1)\) \(O(N)\)   前缀和数组 \(O(N)\) \(O(1)\)   树状数组 \(O(logN)\) \(O(logN)\)    对于普通数组，区间和查询的复杂度较高； 前缀和数组虽然能优化区间和查询，但是下标修改的复杂度较高； 树状数组是一种居中策略，">
+<meta property="og:description" content="2025GPLT校内分组赛补题 摘要     题目 分值 知识点     P4711 「化学」相对分子质量 - 洛谷 25 字符串处理   圣诞彩灯计划 25 图论   数学作业 25 数论   P1194 买礼物 - 洛谷 25 最小生成树    相对分子质量 圣诞彩灯计划 圣诞前夕，小明和妹妹在装饰一棵巨大的电子圣诞树">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://czwcugb.github.io/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/fenwick-tree-8.jpg">
-<meta property="article:published_time" content="2025-04-12T11:31:13.000Z">
-<meta property="article:modified_time" content="2025-04-12T11:34:14.288Z">
+<meta property="article:published_time" content="2025-04-08T07:39:00.000Z">
+<meta property="article:modified_time" content="2025-04-13T11:49:08.234Z">
 <meta property="article:author" content="ChenZhiwei">
-<meta property="article:tag" content="树状数组">
+<meta property="article:tag" content="GPLT">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://czwcugb.github.io/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/fenwick-tree-8.jpg">
   
   
   
-  <title>树状数组 - 陈志伟的个人博客</title>
+  <title>GPLT团体程序设计天梯赛真题训练：2025年校赛补题 - 陈志伟的个人博客</title><meta name="robots" content="noindex">
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -204,7 +202,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="树状数组"></span>
+            <span id="subtitle" data-typed-text="GPLT团体程序设计天梯赛真题训练：2025年校赛补题"></span>
           
         </div>
 
@@ -215,8 +213,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-12 19:31" pubdate>
-          2025年4月12日 晚上
+        <time datetime="2025-04-08 15:39" pubdate>
+          2025年4月8日 下午
         </time>
       </span>
     
@@ -227,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          394 字
+          832 字
         
       </span>
     
@@ -238,7 +236,7 @@
         
         
         
-          4 分钟
+          7 分钟
         
       </span>
     
@@ -275,54 +273,105 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">树状数组</h1>
+            <h1 id="seo-header">GPLT团体程序设计天梯赛真题训练：2025年校赛补题</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="树状数组">树状数组</h1>
+                <h1 id="gplt校内分组赛补题">2025GPLT校内分组赛补题</h1>
+<h2 id="摘要">摘要</h2>
 <table>
+
 <thead>
 <tr>
-<th>类型</th>
-<th>下标修改</th>
-<th>区间和查询</th>
+<th>题目</th>
+<th>分值</th>
+<th>知识点</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>普通数组</td>
-<td><span class="math inline">\(O(1)\)</span></td>
-<td><span class="math inline">\(O(N)\)</span></td>
+<td><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4711">P4711
+「化学」相对分子质量 - 洛谷</a></td>
+<td>25</td>
+<td>字符串处理</td>
 </tr>
 <tr>
-<td>前缀和数组</td>
-<td><span class="math inline">\(O(N)\)</span></td>
-<td><span class="math inline">\(O(1)\)</span></td>
+<td>圣诞彩灯计划</td>
+<td>25</td>
+<td>图论</td>
 </tr>
 <tr>
-<td>树状数组</td>
-<td><span class="math inline">\(O(logN)\)</span></td>
-<td><span class="math inline">\(O(logN)\)</span></td>
+<td>数学作业</td>
+<td>25</td>
+<td>数论</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1194">P1194 买礼物 -
+洛谷</a></td>
+<td>25</td>
+<td>最小生成树</td>
 </tr>
 </tbody>
 </table>
-<p>对于普通数组，区间和查询的复杂度较高；</p>
-<p>前缀和数组虽然能优化区间和查询，但是下标修改的复杂度较高；</p>
-<p>树状数组是一种居中策略，两种操作复杂度都为O(logN)。</p>
-<img src="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/fenwick-tree-8.jpg" srcset="/img/loading.gif" lazyload class="" title="img">
-<p>（图片来源：<a
-target="_blank" rel="noopener" href="https://www.acwing.com/blog/content/80/">树状数组学习笔记 -
-AcWing</a>）</p>
-<p>设 树状数组 为 c，c[i]表示[i - lowbit(i) + 1, i]区间的和。</p>
-<p>1）更新数组：对a[i]更新k，对i 不断加上lowbit(i)，更新每个对应的c[i],
-直到上界N；</p>
-<p>2）查询区间和： [1, i ]的区间和，依次减去lowbit(i),
-直到i等于0即可；</p>
-<p>模板题：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3374">P3374
-【模板】树状数组 1 - 洛谷</a></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-type">const</span> <span class="hljs-type">int</span> maxn = <span class="hljs-number">5e5</span> + <span class="hljs-number">10</span>;<br><br><span class="hljs-type">int</span> n,m;<br><span class="hljs-type">int</span> a[maxn],f[maxn]; <span class="hljs-comment">// 注意a数组不是必要的</span><br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">lowbit</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span></span>&#123;<br>	<span class="hljs-comment">// return x &amp; (~x + 1)</span><br>	<span class="hljs-keyword">return</span> x&amp;(-x);<br>&#125;<br><br><span class="hljs-comment">// a[x] += k, 并更新f数组</span><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">update</span><span class="hljs-params">(<span class="hljs-type">int</span> x, <span class="hljs-type">int</span> k)</span></span>&#123;<br>	a[x] += k;<br>	<span class="hljs-keyword">while</span>(x &lt;= n)&#123;<br>		f[x] += k;<br>		x += <span class="hljs-built_in">lowbit</span>(x);<br>	&#125;<br>&#125;<br><br><span class="hljs-comment">// 求a[1-x]的和</span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">getSum</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span></span>&#123;<br>	<span class="hljs-type">int</span> res = <span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">while</span>(x)&#123;<br>		res += f[x];<br>		x -= <span class="hljs-built_in">lowbit</span>(x);<br>	&#125;<br>	<span class="hljs-keyword">return</span> res;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">init</span><span class="hljs-params">()</span></span>&#123;<br>	cin&gt;&gt;n&gt;&gt;m;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span> ; i &lt;= n ; i ++)&#123;<br>		<span class="hljs-type">int</span> v; cin&gt;&gt;v;<br>		<span class="hljs-built_in">update</span>(i, v);<br>	&#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">()</span></span>&#123;<br>	<span class="hljs-type">int</span> op; cin&gt;&gt;op;<br>	<span class="hljs-keyword">if</span>(op == <span class="hljs-number">1</span>)&#123;<br>		<span class="hljs-type">int</span> x, k; cin&gt;&gt;x&gt;&gt;k;<br>		<span class="hljs-built_in">update</span>(x, k);<br>	&#125;<span class="hljs-keyword">else</span>&#123;<br>		<span class="hljs-type">int</span> x, y; cin&gt;&gt;x&gt;&gt;y;<br>		cout&lt;&lt;<span class="hljs-built_in">getSum</span>(y) - <span class="hljs-built_in">getSum</span>(x<span class="hljs-number">-1</span>)&lt;&lt;<span class="hljs-string">&quot;\n&quot;</span>;<br>	&#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span></span>&#123;<br>	cin.<span class="hljs-built_in">tie</span>(<span class="hljs-number">0</span>), cout.<span class="hljs-built_in">tie</span>(<span class="hljs-number">0</span>), ios::<span class="hljs-built_in">sync_with_stdio</span>(<span class="hljs-literal">false</span>);<br>	<span class="hljs-built_in">init</span>();<br>	<span class="hljs-keyword">while</span>(m--)&#123;<br>		<span class="hljs-built_in">solve</span>();<br>	&#125;<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
-
+<h2 id="相对分子质量">相对分子质量</h2>
+<h2 id="圣诞彩灯计划">圣诞彩灯计划</h2>
+<p>圣诞前夕，小明和妹妹在装饰一棵巨大的电子圣诞树。这棵树的每个枝杈连接处都是一个可编程的节点，能发出红色、蓝色的光芒，或保持熄灭。妹妹提议用游戏决定装饰方案：若小明能计算出在满足特定平衡条件时红色灯的最大数量，就按他的想法布置彩灯，否则妹妹要主导整个设计。</p>
+<hr />
+<p>圣诞树的结构被建模为一棵以节点 1
+为根的树。每个节点可设置为红灯、蓝灯或保持熄灭。装饰规则要求：对于每个非叶子节点，以它为根的子树中红灯数必须等于蓝灯数。小明需要找到满足该规则时，整棵树最多能点亮多少个红灯。</p>
+<h3 id="输入格式">输入格式</h3>
+<p>第一行输入正整数 <em>n</em> (1≤<em>n</em>≤1<em>e</em>5)
+表示节点总数。 接下来 <em>n</em>−1 行，每行两个整数
+<em>u</em>,<em>v</em> (1≤<em>u</em>,<em>v</em>≤<em>n</em>)
+描述节点间的连接关系。</p>
+<h3 id="输出格式">输出格式</h3>
+<p>输出一行整数，表示红灯的最大数量。</p>
+<h3 id="输入样例">输入样例</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs in">5<br>1 2<br>2 3<br>3 4<br>2 5<br></code></pre></td></tr></table></figure>
+<h3 id="输出样例">输出样例</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs out">2<br></code></pre></td></tr></table></figure>
+<h2 id="数据范围">数据范围</h2>
+<ul>
+<li>对于 30% 的数据，<em>n</em>≤20</li>
+<li>对于 100% 的数据，1≤<em>n</em>≤105</li>
+</ul>
+<h2 id="代码">代码</h2>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><br></code></pre></td></tr></table></figure>
+<h2 id="数学作业">数学作业</h2>
+<p>今天小 X 的数学老师带领大家学习了斐波那契序列：</p>
+<p>斐波那契序列指的是这样一个数列：{1,2,3,5,8,13,21,34}。从第 3
+个数开始，每个数都是前两个数的和，比如
+8=3+5,34=13+21。数列里的数叫做斐波那契数。</p>
+<p>一个数 n 的斐波那契表示是指把 n
+写成若干个互不相同的斐波那契数的和。一个数可以有多种不同的斐波那契表示。比如
+14 有三种斐波那契表示：14=1+13,14=1+5+8,14=1+2+3+8。数学老师给小 X
+留下了一个数学作业，她告诉小 X 一个正整数 <em>n</em>，想让小 X 算出
+<em>n</em> 有多少种不同的斐波那契表示。</p>
+<p>小 X 请你帮助他完成他的数学作业。</p>
+<h3 id="输入格式-1">输入格式</h3>
+<p>第一行为一个正整数 <em>n</em> (1≤<em>n</em>≤1012) 。</p>
+<h3 id="输出格式-1">输出格式</h3>
+<p>输出一行一个整数表示答案。</p>
+<h2 id="输入输出样例">输入输出样例</h2>
+<p><strong>输入 #1</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs in">14<br></code></pre></td></tr></table></figure>
+<p><strong>输出 #1</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs out">3<br></code></pre></td></tr></table></figure>
+<p><strong>输入 #2</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs in">1110<br></code></pre></td></tr></table></figure>
+<p><strong>输出 #2</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs out">21<br></code></pre></td></tr></table></figure>
+<p><strong>输入 #3</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs in">1000000000000<br></code></pre></td></tr></table></figure>
+<p><strong>输出 #3</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs out">283392<br></code></pre></td></tr></table></figure>
+<h3 id="代码-1">代码</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><br></code></pre></td></tr></table></figure>
+<h2 id="买礼物">买礼物</h2>
+<p>Kruskal最小生成树</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-type">const</span> <span class="hljs-type">int</span> maxn = <span class="hljs-number">1e3</span>;<br><br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">edge</span>&#123;<br>	<span class="hljs-type">int</span> w;<br>	<span class="hljs-type">int</span> x,y;<br>	<span class="hljs-type">bool</span> <span class="hljs-keyword">operator</span>&lt;(<span class="hljs-type">const</span> edge &amp; rhs)&#123;<br>		<span class="hljs-keyword">return</span> w &lt; rhs.w;<br>	&#125;<br>&#125;;<br>vector&lt;edge&gt; v;<br><br><span class="hljs-type">int</span> p, n;<br><span class="hljs-type">int</span> fa[maxn];<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">find</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span></span>&#123;<br>	<span class="hljs-keyword">return</span> fa[x] == x ? x : fa[x] = <span class="hljs-built_in">find</span>(fa[x]);<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span></span>&#123;<br>	cin&gt;&gt;p&gt;&gt;n;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span> ; i &lt;= n ; i ++) fa[i] = i;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span> ; i &lt;= n ; i ++)&#123;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j = <span class="hljs-number">1</span> ; j &lt;= n ; j ++)&#123;<br>			edge e;  e.x = i; e.y = j; <br>			cin&gt;&gt;e.w;<br>			<span class="hljs-keyword">if</span>(e.w == <span class="hljs-number">0</span> || e.w &gt; p) e.w = p;<br>			v.<span class="hljs-built_in">push_back</span>(e);<br>		&#125;<br>	&#125;<br>	<span class="hljs-built_in">sort</span>(v.<span class="hljs-built_in">begin</span>(), v.<span class="hljs-built_in">end</span>());<br>	<span class="hljs-type">int</span> cnt = <span class="hljs-number">0</span>;<br>	<span class="hljs-type">int</span> sum = <span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span> ; i &lt; v.<span class="hljs-built_in">size</span>() &amp;&amp; cnt &lt; n<span class="hljs-number">-1</span> ; i ++)&#123;<br>		<span class="hljs-type">int</span> fx = <span class="hljs-built_in">find</span>(v[i].x);<br>		<span class="hljs-type">int</span> fy = <span class="hljs-built_in">find</span>(v[i].y);<br>		<span class="hljs-keyword">if</span>(fx == fy) <span class="hljs-keyword">continue</span>;<br>		fa[fx] = fy;<br>		sum += v[i].w;<br>		cnt++;<br>	&#125;<br>	cout&lt;&lt;sum+p;<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<!-- flag of hidden posts -->
                 
               </div>
             
@@ -340,12 +389,12 @@ AcWing</a>）</p>
     
       <span class="category-chain">
         
-  <a href="/categories/%E7%AC%94%E8%AE%B0/" class="category-chain-item">笔记</a>
+  <a href="/categories/%E9%A2%98%E8%A7%A3/" class="category-chain-item">题解</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="category-chain-item">数据结构</a>
+  <a href="/categories/%E9%A2%98%E8%A7%A3/GPLT/" class="category-chain-item">GPLT</a>
   
   
 
@@ -362,7 +411,7 @@ AcWing</a>）</p>
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/" class="print-no-link">#树状数组</a>
+        <a href="/tags/GPLT/" class="print-no-link">#GPLT</a>
       
     </div>
   
@@ -374,8 +423,8 @@ AcWing</a>）</p>
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>树状数组</div>
-      <div>https://czwcugb.github.io/数据结构/树状数组/</div>
+      <div>GPLT团体程序设计天梯赛真题训练：2025年校赛补题</div>
+      <div>https://czwcugb.github.io/题解/GPLT/2025-group-match/</div>
     </div>
     <div class="license-meta">
       
@@ -387,7 +436,7 @@ AcWing</a>）</p>
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年4月12日</div>
+          <div>2025年4月8日</div>
         </div>
       
       
@@ -419,21 +468,9 @@ AcWing</a>）</p>
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/%E9%A2%98%E8%A7%A3/lanqiao/2021/" title="蓝桥杯软件赛C++A组省赛真题训练：2021年">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">蓝桥杯软件赛C++A组省赛真题训练：2021年</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
-                    
-                      <a href="/%E5%88%86%E6%B2%BB/ST%E8%A1%A8/" title="ST表维护区间最值">
-                        <span class="hidden-mobile">ST表维护区间最值</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
                     
                   </article>
                 </div>
