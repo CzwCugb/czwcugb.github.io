@@ -24,19 +24,19 @@
     <meta name="description" content="RAICOM-CAIP-2021-省赛题解">
 <meta property="og:type" content="article">
 <meta property="og:title" content="RAICOM-CAIP-2021-省赛题解">
-<meta property="og:url" content="https://czwcugb.github.io/%E9%A2%98%E8%A7%A3/RAICOM-CAIP/2021-%E7%9C%81%E8%B5%9B/index.html">
+<meta property="og:url" content="https://czwcugb.github.io/%E9%A2%98%E8%A7%A3/raicom-caip/2021-%E7%9C%81%E8%B5%9B/index.html">
 <meta property="og:site_name" content="陈志伟的个人博客">
 <meta property="og:description" content="RAICOM-CAIP-2021-省赛题解">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://czwcugb.github.io/%E9%A2%98%E8%A7%A3/RAICOM-CAIP/2021-%E7%9C%81%E8%B5%9B/adc22dc9-7cd0-417c-9274-3d0678474c6e.jpg">
-<meta property="og:image" content="https://czwcugb.github.io/%E9%A2%98%E8%A7%A3/RAICOM-CAIP/2021-%E7%9C%81%E8%B5%9B/62b483d4-0b40-41bd-a8b1-be4a0aeae56a.png">
-<meta property="og:image" content="https://czwcugb.github.io/%E9%A2%98%E8%A7%A3/RAICOM-CAIP/2021-%E7%9C%81%E8%B5%9B/f21ac592-3c21-4205-aa10-cb39d706afb4.jpeg">
+<meta property="og:image" content="https://czwcugb.github.io/%E9%A2%98%E8%A7%A3/raicom-caip/2021-%E7%9C%81%E8%B5%9B/adc22dc9-7cd0-417c-9274-3d0678474c6e.jpg">
+<meta property="og:image" content="https://czwcugb.github.io/%E9%A2%98%E8%A7%A3/raicom-caip/2021-%E7%9C%81%E8%B5%9B/62b483d4-0b40-41bd-a8b1-be4a0aeae56a.png">
+<meta property="og:image" content="https://czwcugb.github.io/%E9%A2%98%E8%A7%A3/raicom-caip/2021-%E7%9C%81%E8%B5%9B/f21ac592-3c21-4205-aa10-cb39d706afb4.jpeg">
 <meta property="article:published_time" content="2025-01-12T16:53:57.000Z">
 <meta property="article:modified_time" content="2025-01-14T12:11:41.923Z">
 <meta property="article:author" content="ChenZhiwei">
 <meta property="article:tag" content="CAIP">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://czwcugb.github.io/%E9%A2%98%E8%A7%A3/RAICOM-CAIP/2021-%E7%9C%81%E8%B5%9B/adc22dc9-7cd0-417c-9274-3d0678474c6e.jpg">
+<meta name="twitter:image" content="https://czwcugb.github.io/%E9%A2%98%E8%A7%A3/raicom-caip/2021-%E7%9C%81%E8%B5%9B/adc22dc9-7cd0-417c-9274-3d0678474c6e.jpg">
   
   
   
@@ -283,7 +283,7 @@
               <div class="markdown-body">
                 
                 <h1 id="懂的都懂dfs">1：懂的都懂（DFS）</h1>
-<img src="/%E9%A2%98%E8%A7%A3/RAICOM-CAIP/2021-%E7%9C%81%E8%B5%9B/adc22dc9-7cd0-417c-9274-3d0678474c6e.jpg" srcset="/img/loading.gif" lazyload class="" title="b3ceb051352ac65c29767cc3ecf2b21192138add.jpg">
+<img src="/%E9%A2%98%E8%A7%A3/raicom-caip/2021-%E7%9C%81%E8%B5%9B/adc22dc9-7cd0-417c-9274-3d0678474c6e.jpg" srcset="/img/loading.gif" lazyload class="" title="b3ceb051352ac65c29767cc3ecf2b21192138add.jpg">
 <p>众所周知，在互联网上有很多话是不好直接说出来的，不过一些模糊的图片仍然能让网友看懂你在说什么。然而对这种言论依然一定要出重拳，所以请你实现一个简单的匹配算法。</p>
 <p>现在我们采集了原图的一些特征数据，由 <em>N</em> 个小于 255
 的非负整数组成，假设对于给定的若干张由 *M**i* 个同样小于 255
@@ -308,7 +308,7 @@
 <h3 id="代码">代码</h3>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-type">const</span> <span class="hljs-type">int</span> MAX = <span class="hljs-number">1e4</span>;<br><br><span class="hljs-type">int</span> n,k;<br><span class="hljs-type">int</span> a[MAX];<br>set&lt;<span class="hljs-type">int</span> &gt; st;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">getSet</span><span class="hljs-params">(<span class="hljs-type">int</span> sum, <span class="hljs-type">int</span> dep, <span class="hljs-type">int</span> cnt)</span></span>&#123;<br>	<span class="hljs-keyword">if</span>(cnt == <span class="hljs-number">4</span>)&#123;<br>		st.<span class="hljs-built_in">insert</span>(sum);<br>		<span class="hljs-keyword">return</span>;<br>	&#125;<br>	<span class="hljs-keyword">if</span>(dep == n || cnt &gt; <span class="hljs-number">4</span>) <span class="hljs-keyword">return</span>;<br>	<span class="hljs-built_in">getSet</span>(sum + a[dep],dep<span class="hljs-number">+1</span>,cnt<span class="hljs-number">+1</span>);<br>	<span class="hljs-built_in">getSet</span>(sum,dep<span class="hljs-number">+1</span>,cnt);<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span></span>&#123;<br>	cin&gt;&gt;n&gt;&gt;k;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span> ; i &lt; n ; i ++)&#123;<br>		cin&gt;&gt;a[i];<br>	&#125;<br>	<span class="hljs-built_in">getSet</span>(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>);<br>	<span class="hljs-keyword">while</span>(k--)&#123;<br>		<span class="hljs-type">int</span> m;cin&gt;&gt;m;<br>		string ans = <span class="hljs-string">&quot;Yes&quot;</span>;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span> ; i &lt; m ; i ++)&#123;<br>			<span class="hljs-type">int</span> tep;cin&gt;&gt;tep;<br>			<span class="hljs-keyword">if</span>(st.<span class="hljs-built_in">count</span>(tep*<span class="hljs-number">4</span>) == <span class="hljs-number">0</span>) ans = <span class="hljs-string">&quot;No&quot;</span>; <br>		&#125;<br>		cout&lt;&lt;ans&lt;&lt;endl;<br>	&#125;<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 <h1 id="芬兰木棋几何">2：芬兰木棋（几何）</h1>
-<img src="/%E9%A2%98%E8%A7%A3/RAICOM-CAIP/2021-%E7%9C%81%E8%B5%9B/62b483d4-0b40-41bd-a8b1-be4a0aeae56a.png" srcset="/img/loading.gif" lazyload class="" title="WX20200212-152528.png">
+<img src="/%E9%A2%98%E8%A7%A3/raicom-caip/2021-%E7%9C%81%E8%B5%9B/62b483d4-0b40-41bd-a8b1-be4a0aeae56a.png" srcset="/img/loading.gif" lazyload class="" title="WX20200212-152528.png">
 <p>芬兰木棋（Mölkky，又称芬兰木柱）是源自芬兰的一项运动。哲哲将这个运动改造成了赛博朋克单人版，现在场上一开始有
 <em>N</em>
 根立起的小木棋（上面分别标有一个非负整数），哲哲投掷一根大木棋去击倒这些小木棋以获得分数。分数规则如下：</p>
@@ -348,7 +348,7 @@ b）的斜率k，使用map&lt;double,a&gt;映射到某个集合上。</p>
 <h3 id="代码-1">代码</h3>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-type">const</span> <span class="hljs-type">int</span> MAX = <span class="hljs-number">1e6</span>;<br><br><span class="hljs-type">int</span> n,idx,sum,cnt;<br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">Point</span>&#123;<br>	<span class="hljs-type">int</span> x,y,w;<br>	<br>	<span class="hljs-built_in">Point</span>(<span class="hljs-type">int</span> x_,<span class="hljs-type">int</span> y_,<span class="hljs-type">int</span> w_)&#123;<br>		x = x_;<br>		y = y_;<br>		w = w_;<br>	&#125;<br>	<br>	<span class="hljs-type">bool</span> <span class="hljs-keyword">operator</span>&lt;(<span class="hljs-type">const</span> Point &amp; rhs)&#123;<br>		<span class="hljs-keyword">if</span>(x != rhs.x) <span class="hljs-keyword">return</span> x &lt; rhs.x;<br>		<span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> y &lt; rhs.y;<br>	&#125;<br>&#125;;<br><br>vector&lt;Point&gt; v[MAX];<br>unordered_map&lt;<span class="hljs-type">double</span>,<span class="hljs-type">int</span> &gt; mp;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span></span>&#123;<br>	cin&gt;&gt;n;<br>	idx = <span class="hljs-number">1</span>;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span> ; i &lt; n ; i ++)&#123;<br>		<span class="hljs-type">int</span> x,y,w;<br>		cin&gt;&gt;x&gt;&gt;y&gt;&gt;w;<br>		<span class="hljs-keyword">if</span>(x == <span class="hljs-number">0</span>)&#123;<br>			v[<span class="hljs-number">0</span>].<span class="hljs-built_in">push_back</span>(<span class="hljs-built_in">Point</span>(x,y,w));<br>			<span class="hljs-keyword">continue</span>;<br>		&#125;<br>		<span class="hljs-type">double</span> k = (<span class="hljs-number">1.0</span>*y)/x;<br>		<span class="hljs-keyword">if</span>(!mp[k]) mp[k] = idx++;<br>		v[mp[k]].<span class="hljs-built_in">push_back</span>(<span class="hljs-built_in">Point</span>(x,y,w));<br>	&#125;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span> ; i &lt; idx ; i ++)&#123;<br>		<span class="hljs-built_in">sort</span>(v[i].<span class="hljs-built_in">begin</span>(),v[i].<span class="hljs-built_in">end</span>());<br>		<span class="hljs-type">int</span> last = <span class="hljs-number">0</span>;<br>		<span class="hljs-keyword">for</span>(Point it : v[i])&#123;<br>			sum += it.w;<br>			<span class="hljs-keyword">if</span>(it.w == last &amp;&amp; it.w == <span class="hljs-number">1</span>) <span class="hljs-keyword">continue</span>;<br>			<span class="hljs-keyword">else</span> cnt++;<br>			last = it.w;<br>		&#125;<br>	&#125;<br>	cout&lt;&lt;sum&lt;&lt;<span class="hljs-string">&quot; &quot;</span>&lt;&lt;cnt&lt;&lt;endl;<br>&#125;<br></code></pre></td></tr></table></figure>
 <h1 id="打怪升级floyddijkstra">3：打怪升级（Floyd+Dijkstra）</h1>
-<img src="/%E9%A2%98%E8%A7%A3/RAICOM-CAIP/2021-%E7%9C%81%E8%B5%9B/f21ac592-3c21-4205-aa10-cb39d706afb4.jpeg" srcset="/img/loading.gif" lazyload class="" title="dgsj.JPG">
+<img src="/%E9%A2%98%E8%A7%A3/raicom-caip/2021-%E7%9C%81%E8%B5%9B/f21ac592-3c21-4205-aa10-cb39d706afb4.jpeg" srcset="/img/loading.gif" lazyload class="" title="dgsj.JPG">
 <p>很多游戏都有打怪升级的环节，玩家需要打败一系列怪兽去赢取成就和徽章。这里我们考虑一种简单的打怪升级游戏，游戏规则是，给定有
 <em>N</em>
 个堡垒的地图，堡垒之间有道路相连，每条道路上有一只怪兽把守。怪兽本身有能量，手里的武器有价值。打败怪兽需要的能量等于怪兽本身的能量，而怪兽一旦被打败，武器就归玩家所有
@@ -477,7 +477,7 @@ b）的斜率k，使用map&lt;double,a&gt;映射到某个集合上。</p>
   <div class="license-box my-3">
     <div class="license-title">
       <div>RAICOM-CAIP-2021-省赛题解</div>
-      <div>https://czwcugb.github.io/题解/RAICOM-CAIP/2021-省赛/</div>
+      <div>https://czwcugb.github.io/题解/raicom-caip/2021-省赛/</div>
     </div>
     <div class="license-meta">
       
@@ -521,7 +521,7 @@ b）的斜率k，使用map&lt;double,a&gt;映射到某个集合上。</p>
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/%E9%A2%98%E8%A7%A3/RAICOM-CAIP/2022-%E7%9C%81%E8%B5%9B/" title="RAICOM-CAIP-2022-省赛题解">
+                      <a href="/%E9%A2%98%E8%A7%A3/raicom-caip/2022-%E7%9C%81%E8%B5%9B/" title="RAICOM-CAIP-2022-省赛题解">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">RAICOM-CAIP-2022-省赛题解</span>
                         <span class="visible-mobile">上一篇</span>
