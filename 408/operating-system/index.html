@@ -33,8 +33,19 @@
 <meta property="og:image" content="https://czwcugb.github.io/408/operating-system/image-20250421210950400.png">
 <meta property="og:image" content="https://czwcugb.github.io/408/operating-system/image-20250421211012072.png">
 <meta property="og:image" content="https://czwcugb.github.io/408/operating-system/image-20250421211420434.png">
+<meta property="og:image" content="https://czwcugb.github.io/408/operating-system/image-20250421234744799.png">
+<meta property="og:image" content="https://czwcugb.github.io/408/operating-system/image-20250421234939518.png">
+<meta property="og:image" content="https://czwcugb.github.io/408/operating-system/image-20250421235102712.png">
+<meta property="og:image" content="https://czwcugb.github.io/408/operating-system/image-20250421235647771.png">
+<meta property="og:image" content="https://czwcugb.github.io/408/operating-system/image-20250421235751158.png">
+<meta property="og:image" content="https://czwcugb.github.io/408/operating-system/image-20250421235902360.png">
+<meta property="og:image" content="https://czwcugb.github.io/408/operating-system/image-20250422000010421.png">
+<meta property="og:image" content="https://czwcugb.github.io/408/operating-system/image-20250422203600272.png">
+<meta property="og:image" content="https://czwcugb.github.io/408/operating-system/image-20250422203648144.png">
+<meta property="og:image" content="https://czwcugb.github.io/408/operating-system/image-20250422203702520.png">
+<meta property="og:image" content="https://czwcugb.github.io/408/operating-system/image-20250422222049730.png">
 <meta property="article:published_time" content="2025-04-21T12:23:00.000Z">
-<meta property="article:modified_time" content="2025-04-21T13:46:26.802Z">
+<meta property="article:modified_time" content="2025-04-22T14:23:13.134Z">
 <meta property="article:author" content="ChenZhiwei">
 <meta property="article:tag" content="408">
 <meta property="article:tag" content="操作系统">
@@ -232,7 +243,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.1k 字
+          3.6k 字
         
       </span>
     
@@ -243,7 +254,7 @@
         
         
         
-          10 分钟
+          31 分钟
         
       </span>
     
@@ -324,32 +335,159 @@ B.提高系统吞吐量（通过调整工作流程，缩短程序运行周期）
 <p>5）异步性：进程按各自独立的、 不可预知的速度向前推进。</p>
 <h3 id="状态">2.3 状态</h3>
 <p>进程包括如下三种基本状态：</p>
-<style>.ygadjqrkriis{zoom:67%;}</style>
-<img src="/408/operating-system/image-20250421205732140.png" srcset="/img/loading.gif" lazyload class="ygadjqrkriis" alt="image-20250421205732140">
+<style>.wdrwvegierpg{zoom:67%;}</style>
+<img src="/408/operating-system/image-20250421205732140.png" srcset="/img/loading.gif" lazyload class="wdrwvegierpg" alt="image-20250421205732140">
 <p>在不少系统中进程只有上述三种状态，但在另一些系统中，又增加了一些新状态，最重要的是<strong>挂起</strong>状态。</p>
 <blockquote>
 <p>阻塞和挂起的区别？</p>
 <p>阻塞是进程本身引起的，而挂起的原因都是外部的，不是程序本身的原因。</p>
 </blockquote>
 <p>将挂起称为静止，将未被挂起称为活动，可以得到如下5种状态：</p>
-<style>.xktcoxrytyvn{zoom: 50%;}</style>
-<img src="/408/operating-system/image-20250421210438333.png" srcset="/img/loading.gif" lazyload class="xktcoxrytyvn" alt="image-20250421210438333">
+<style>.yfweuawqerrf{zoom: 50%;}</style>
+<img src="/408/operating-system/image-20250421210438333.png" srcset="/img/loading.gif" lazyload class="yfweuawqerrf" alt="image-20250421210438333">
 <h3 id="信号量机制">2.4 信号量机制</h3>
 <p>使用信号量可以实现前趋图中的PV关系。</p>
-<style>.ddqtonmxluro{zoom:67%;}</style>
-<img src="/408/operating-system/image-20250421210950400.png" srcset="/img/loading.gif" lazyload class="ddqtonmxluro" alt="image-20250421210950400">
+<style>.hqolmswlruwk{zoom:67%;}</style>
+<img src="/408/operating-system/image-20250421210950400.png" srcset="/img/loading.gif" lazyload class="hqolmswlruwk" alt="image-20250421210950400">
 <p>由上述前趋图看，得到的伪代码如下：</p>
-<style>.pcmpkdptodum{zoom:67%;}</style>
-<img src="/408/operating-system/image-20250421211012072.png" srcset="/img/loading.gif" lazyload class="pcmpkdptodum" alt="image-20250421211012072">
+<style>.clrijiqrlkpu{zoom:67%;}</style>
+<img src="/408/operating-system/image-20250421211012072.png" srcset="/img/loading.gif" lazyload class="clrijiqrlkpu" alt="image-20250421211012072">
 <p>此处P表示请求信号量，V表示释放信号量；a-g信号量的初始值为0。</p>
 <p><strong>AND信号量</strong>被用于解决多个信号量的死锁问题：</p>
-<style>.qmpkbmogebih{zoom:67%;}</style>
-<img src="/408/operating-system/image-20250421211420434.png" srcset="/img/loading.gif" lazyload class="qmpkbmogebih" alt="image-20250421211420434">
+<style>.ikqmdvudqutx{zoom:67%;}</style>
+<img src="/408/operating-system/image-20250421211420434.png" srcset="/img/loading.gif" lazyload class="ikqmdvudqutx" alt="image-20250421211420434">
 <p>AND同步机制的基本思想是：将进程在整个运行过程中需要的所有资源，一次性全部地分配给进程，待进程使用完后再一起释放。只要尚有一个资源未能分配给进程，其它所有可能为之分配的资源也不分配给它。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-built_in">Swait</span>(S1，S2，…，Sn)<br>　　<span class="hljs-keyword">if</span> Si&gt;=<span class="hljs-number">1</span> <span class="hljs-keyword">and</span> … <span class="hljs-keyword">and</span> Sn&gt;=<span class="hljs-number">1</span> then<br>　　　<span class="hljs-keyword">for</span> i:=<span class="hljs-number">1</span> to n <span class="hljs-keyword">do</span><br>　　　  Si:=Si<span class="hljs-number">-1</span>；<br>　　　endfor<br>　　<span class="hljs-keyword">else</span><br>　　 place the process in the waiting queue associated with the first Si found with Si&lt;<span class="hljs-number">1</span>，<span class="hljs-keyword">and</span> set the program count of <span class="hljs-keyword">this</span> process to the beginning of Swait operation <br>　　endif<br><br><span class="hljs-built_in">Ssignal</span>(S1，S2，…，Sn)<br>  <span class="hljs-keyword">for</span> i:=<span class="hljs-number">1</span> to n <span class="hljs-keyword">do</span><br>    Si:=Si<span class="hljs-number">+1</span>；<br>    Remove all the process waiting in the queue associated with Si into the ready queue.<br>  endfor； <br></code></pre></td></tr></table></figure>
-<h3 id="读者-写者">2.5 读者-写者</h3>
-<h3 id="生产者-消费者">2.6 生产者-消费者</h3>
-<h3 id="哲学家">2.7 哲学家</h3>
+<h3 id="生产者-消费者">2.5 生产者-消费者</h3>
+<style>.ckbhooypgfov{zoom:67%;}</style>
+<img src="/408/operating-system/image-20250421234744799.png" srcset="/img/loading.gif" lazyload class="ckbhooypgfov" alt="image-20250421234744799">
+<h3 id="哲学家进餐">2.6 哲学家进餐</h3>
+<p>放在桌子上的筷子是临界资源，在一段时间内只允许一位哲学家使用。</p>
+<style>.lmbpxwtvnqif{zoom:50%;}</style>
+<img src="/408/operating-system/image-20250421234939518.png" srcset="/img/loading.gif" lazyload class="lmbpxwtvnqif" alt="image-20250421234939518">
+<p>信号量伪代码：</p>
+<style>.voplrtvhhljq{zoom: 67%;}</style>
+<img src="/408/operating-system/image-20250421235102712.png" srcset="/img/loading.gif" lazyload class="voplrtvhhljq" alt="image-20250421235102712">
+<style>.iqsbhchunfgw{zoom:67%;}</style>
+<img src="/408/operating-system/image-20250421235647771.png" srcset="/img/loading.gif" lazyload class="iqsbhchunfgw" alt="image-20250421235647771">
+<p>虽然上述解法可保证不会有两个相邻的哲学家同时进餐，但有可能引起死锁。</p>
+<p>假如五位哲学家同时饥饿而各自拿起左边的筷子时，就会使五个信号量chopstick均为0；
+当他们再试图去拿右边的筷子时，都将因无筷子可拿而无限期地等待。</p>
+<p>对于这样的死锁问题，可采取以下几种解决方法：</p>
+<p>　　(1) 至多只允许有四位哲学家同时去拿左边的筷子。</p>
+<p>　　(2)
+仅当哲学家的左、右两只筷子均可用时，才允许他拿起筷子进餐。即AND信号量。</p>
+<p>　　(3)
+规定奇数号哲学家先拿他左边的筷子，然后再去拿右边的筷子，而偶数号哲学家则相反。按此规定，最后总会有一位哲学家能获得两只筷子而进餐。</p>
+<p>AND信号量（正解）：</p>
+<style>.oooslrdejwxh{zoom: 67%;}</style>
+<img src="/408/operating-system/image-20250421235751158.png" srcset="/img/loading.gif" lazyload class="oooslrdejwxh" alt="image-20250421235751158">
+<h3 id="读者-写者">2.7 读者-写者</h3>
+<p>多个读者进程可以共存，一个写进程和其他读/写进程不能共存。</p>
+<style>.mrxgrtynvbbl{zoom:67%;}</style>
+<img src="/408/operating-system/image-20250421235902360.png" srcset="/img/loading.gif" lazyload class="mrxgrtynvbbl" alt="image-20250421235902360">
+<h3 id="理发师">2-8 理发师</h3>
+<p>一个理发师和一把理发椅子，另有N把椅子供顾客休息等待。</p>
+<p>没有顾客时，理发师休息，等待顾客；</p>
+<p>每个顾客来时，先看是否有椅子空位，有空位，则坐下等待，否则不等待直接走。</p>
+<style>.vvopbhpvdmtv{zoom:67%;}</style>
+<img src="/408/operating-system/image-20250422000010421.png" srcset="/img/loading.gif" lazyload class="vvopbhpvdmtv" alt="image-20250422000010421">
+<h3 id="进程通信">2-9 进程通信</h3>
+<p>1）共享存储器系统</p>
+<p>​
+在这种通信方式中，要求诸进程公用某些数据结构（例如，有界缓冲区），借以实现诸进程间的信息交换。</p>
+<p>​
+<strong>公用数据结构的设置及对进程间同步的处理，都是程序员的职责</strong>。这无疑<strong>增加了程序员的负担</strong>，而操作系统却只须提供共享存储器。程序员的工作比较复杂。</p>
+<p>2）消息传递系统</p>
+<p>​
+消息传递系统是当前应用<strong>最为广泛</strong>的一种进程间的通信机制。程序员直接利用操作系统提供的一组通信命令，不仅能实现大量数据的传递，而且还<strong>隐藏了通信的实现细节，使通信过程对用户是透明的</strong>，从而大大减化了通信程序编制的复杂性。</p>
+<p>​
+A.直接通信方法：发送进程利用OS所提供的发送命令，直接把消息发送给目标进程。此时，要求发送进程和接收进程都以显式方式提供对方的标识符。通常，系统提供下述两条通信命令(原语)：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-built_in">Send</span>(Receiver，message)；<span class="hljs-comment">//发送一个消息给接收进程</span><br><span class="hljs-built_in">Receive</span>(Sender，message)；<span class="hljs-comment">//接收Sender发来的消息；Sender也可以不指定。 </span><br></code></pre></td></tr></table></figure>
+<p>​
+B.间接通信方法：间接通信方式指进程之间的通信需要通过作为共享数据结构的实体。该实体用来暂存发送进程发送给目标进程的消息；接收进程则从该实体中取出对方发送给自己的消息。通常把这种中间实体称为<strong>信箱</strong>。</p>
+<p>3）管道通信</p>
+<p>​
+所谓“管道”，是指用于连接一个读进程和一个写进程以实现它们之间通信的一个共享文件，又名pipe文件。向管道(共享文件)提供输入的发送进程(即写进程)，以字符流形式将大量的数据送入管道；而接受管道输出的接收进程(即读进程)，则从管道中接收(读)数据。</p>
+<h3 id="线程">2.10 线程</h3>
+<p>在多线程OS中，通常是在一个进程中包括多个线程，每个线程都是作为利用CPU的基本单位，是花费最小开销的实体。</p>
+<p>使OS具有更好的并发性，在进程内并发有如下优点：</p>
+<p>​ 1）并发更加细化；2）方便平行计算（并发）软件的开发。</p>
+<h2 id="处理机调度与死锁">3 处理机调度与死锁</h2>
+<h3 id="分类">3.1 分类</h3>
+<p>操作系统处理机调度分为（高级、低级、中级）三种</p>
+<p>1）高级调度（作业调度，接纳调度）：</p>
+<p>​
+作业是一个比程序更为广泛的概念，不仅包含了通常的程序和数据，而且还应配有一份作业说明书，系统根据该说明书来对程序的运行进行控制。</p>
+<p>2）低级调度（进程调度，短程调度）：</p>
+<p>​
+进程调度用于决定就绪队列中的哪个进程应获得处理机，然后再由分派程序把处理机分配给该进程的具体操作。这是<strong>操作系统真正实现多道并发的关键</strong>。</p>
+<p>​
+进程调度可采用“抢占/非抢占”两种调度方式。非抢占调度指的是：一旦把处理机分配给某进程后，都一直让它运行下去，直至该进程完成；抢占调度允许调度程序根据某种原则去暂停某个正在执行的进程，将处理机重新分配给另一进程。</p>
+<p>3）中级调度（中程调度）：</p>
+<p>​
+中级调度将暂时不能运行的进程不再占用宝贵的内存资源，调至外存上去等待；当这些进程重又具备运行条件且内存又稍有空闲时，再重新调入内存等待运行。引入中级调度的主要目的是为了提高内存利用率。
+&gt;早期计算机中普遍采用，目前广泛采用虚拟内存技术，中级调度已不再使用。</p>
+<h3 id="调度队列模型">3.2 调度队列模型</h3>
+<p>1）仅有进程调度的调度队列模型</p>
+<style>.ngursqsxshhw{zoom: 50%;}</style>
+<img src="/408/operating-system/image-20250422203600272.png" srcset="/img/loading.gif" lazyload class="ngursqsxshhw" alt="image-20250422203600272">
+<p>2）具有高级和低级调度的调度队列模型</p>
+<style>.yzimblxgehyp{zoom:67%;}</style>
+<img src="/408/operating-system/image-20250422203648144.png" srcset="/img/loading.gif" lazyload class="yzimblxgehyp" alt="image-20250422203648144">
+<p>区别：A.就绪队列的形式和进程来源，
+采用高优先权优先调度算法。B.设置多个阻塞队列。</p>
+<p>3）同时具有三级调度的调度队列模型</p>
+<style>.ecajmglcbmub{zoom:67%;}</style>
+<img src="/408/operating-system/image-20250422203702520.png" srcset="/img/loading.gif" lazyload class="ecajmglcbmub" alt="image-20250422203702520">
+<p>区别：引入中级调度，把就绪状态分为内存就绪和外存就绪。类似地，也可把阻塞状态进一步分成内存阻塞和外存阻塞。</p>
+<h3 id="调度准则">3.3 调度准则</h3>
+<p>1）面向用户的准则：</p>
+<p>​
+A.周转时间短（常用于批处理系统）；B.响应时间快（常用于分时系统）；</p>
+<p>​
+C.截止时间的保证（常见于实时系统）。D.优先权准则（含义：让某些紧急的作业能得到及时处理）</p>
+<p>2）面向系统的准则：</p>
+<p>​
+A.系统吞吐量高（用于批处理系统）；B.各类资源的平衡利用（保持系统中各类资源都处于忙碌状态）；</p>
+<p>​ C.处理机利用率好</p>
+<h3 id="调度算法">3.4 调度算法</h3>
+<h3 id="死锁产生原因和条件">3.5 死锁产生原因和条件</h3>
+<p>1）原因：</p>
+<p>​
+A.竞争资源：系统中供多个进程共享的资源的数目不足以满足诸进程的需要。</p>
+<p>​
+B.进程间推进顺序不当：进程在运行过程中，请求和释放资源的顺序不合理。</p>
+<p>2）条件：
+A.互斥条件：指进程对所分配到的资源进行排它性使用，即在一段时间内某资源只由一个进程占用（临界资源）。</p>
+<p>​
+B.请求和保持条件：指进程已经保持了至少一个资源，但又提出了新的资源请求，而该资源又已被其它进程占有，此时请求进程阻塞，但又对自己已获得的其它资源保持不放。</p>
+<p>​
+C.不剥夺条件：指进程已获得的资源，在未使用完之前，不能被剥夺，只能在使用完时由自己释放。</p>
+<p>​ D.环路等待条件：指在发生死锁时，必然存在一个进程——资源的环形链。</p>
+<h3 id="预防死锁">3.6 预防死锁</h3>
+<p>预防死锁指的是：通过设置某些限制条件，去<strong>破坏产生死锁的四个必要条件</strong>中的至少一个，来预防发生死锁。</p>
+<p>预防死锁是一种较易实现的方法，以降低系统资源利用率和系统吞吐量为代价，已被广泛使用。</p>
+<p>1）摒弃“请求和保持”条件</p>
+<p>​
+系统规定所有进程在开始运行之前，都必须一次性地申请其在整个运行过程所需的全部资源。</p>
+<p>​
+缺点：进程是一次性地获得其整个运行过程所需的全部资源的，且独占资源，其中可能有些资源很少使用，甚至在整个运行期间都未使用，这就<strong>严重地恶化了系统资源的利用率</strong>。此外，进程也延迟运行。仅当进程在获得了其所需的全部资源后，才能开始运行。</p>
+<p>2）摒弃“不剥夺”条件</p>
+<p>​
+缺点：一个资源在使用一段时间后，它的被迫释放可能会造成前段工作的失效。即使是采取了某些防范措施，也还会使进程前后两次运行的信息不连续。</p>
+<p>3）摒弃“环路等待”条件</p>
+<p>​
+所有进程对资源的请求必须严格按照资源序号递增的次序提出，这样，在所形成的资源分配图中，不可能再出现环路。这种预防死锁的策略与前两种策略比较，其资源利用率和系统吞吐量都有较明显的改善。</p>
+<p>​
+缺点：系统中各类资源的序号必须相对稳定，这就限制了新类型设备的增加，也必然会限制用户简单、自主地编程。</p>
+<h3 id="银行家算法">3.7 银行家算法</h3>
+<p>https://www.bilibili.com/video/BV18M4m1f76s?vd_source=5f2b68719bbd3751e445c4e25eb9e7ae</p>
+<h3 id="死锁的检测与解除">3.8 死锁的检测与解除</h3>
+<p>资源分配图：e={pi，rj}是资源请求边，由进程pi指向资源rj，它表示进程pi请求一个单位的rj资源。e={rj，pi}是资源分配边，由资源rj指向进程pi，它表示把一个单位的资源rj分配给进程pi。</p>
+<style>.djjsttjjzslq{zoom:67%;}</style>
+<img src="/408/operating-system/image-20250422222049730.png" srcset="/img/loading.gif" lazyload class="djjsttjjzslq" alt="image-20250422222049730">
+<p>S为死锁状态的充分条件是：当且仅当S状态的资源分配图是不可完全简化的。该充分条件被称为死锁定理。</p>
 
                 
               </div>
@@ -441,6 +579,12 @@ B.提高系统吞吐量（通过调整工作流程，缩短程序运行周期）
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/%E9%A2%98%E8%A7%A3/GPLT/2025/" title="GPLT团体程序设计天梯赛真题训练：2025年">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">GPLT团体程序设计天梯赛真题训练：2025年</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
