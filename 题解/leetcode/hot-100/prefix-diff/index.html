@@ -21,23 +21,24 @@
   <meta name="author" content="ChenZhiwei">
   <meta name="keywords" content="">
   
-    <meta name="description" content="LeetCode热题100：哈希 摘要     题目 知识点     1. 两数之和 - 力扣（LeetCode） 哈希优化查找   49. 字母异位词分组 - 力扣（LeetCode） 哈希表   128. 最长连续序列 - 力扣（LeetCode） 哈希优化查找   560. 和为 K 的子数组 - 力扣（LeetCode） 哈希，前缀">
+    <meta name="description" content="LeetCode热题100：前缀和 差分 摘要     题目 知识点     56. 合并区间 - 力扣（LeetCode） 差分，排序   238. 除自身以外数组的乘积 - 力扣（LeetCode） 前缀和    合并区间 以数组 intervals 表示若干个区间的集合，其中单个区间为 intervals[i] &#x3D; [starti, endi">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode热题100：哈希">
-<meta property="og:url" content="https://czwcugb.github.io/%E9%A2%98%E8%A7%A3/leetcode/hot-100/hash/index.html">
+<meta property="og:title" content="LeetCode热题100：前缀和 差分">
+<meta property="og:url" content="https://czwcugb.github.io/%E9%A2%98%E8%A7%A3/leetcode/hot-100/prefix-diff/index.html">
 <meta property="og:site_name" content="陈志伟的个人博客">
-<meta property="og:description" content="LeetCode热题100：哈希 摘要     题目 知识点     1. 两数之和 - 力扣（LeetCode） 哈希优化查找   49. 字母异位词分组 - 力扣（LeetCode） 哈希表   128. 最长连续序列 - 力扣（LeetCode） 哈希优化查找   560. 和为 K 的子数组 - 力扣（LeetCode） 哈希，前缀">
+<meta property="og:description" content="LeetCode热题100：前缀和 差分 摘要     题目 知识点     56. 合并区间 - 力扣（LeetCode） 差分，排序   238. 除自身以外数组的乘积 - 力扣（LeetCode） 前缀和    合并区间 以数组 intervals 表示若干个区间的集合，其中单个区间为 intervals[i] &#x3D; [starti, endi">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-05-02T16:20:00.000Z">
-<meta property="article:modified_time" content="2025-05-03T17:25:41.662Z">
+<meta property="article:published_time" content="2025-05-03T11:34:00.000Z">
+<meta property="article:modified_time" content="2025-05-03T17:21:43.348Z">
 <meta property="article:author" content="ChenZhiwei">
+<meta property="article:tag" content="前缀和">
+<meta property="article:tag" content="差分">
 <meta property="article:tag" content="LeetCode">
-<meta property="article:tag" content="哈希">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>LeetCode热题100：哈希 - 陈志伟的个人博客</title>
+  <title>LeetCode热题100：前缀和 差分 - 陈志伟的个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -203,7 +204,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="LeetCode热题100：哈希"></span>
+            <span id="subtitle" data-typed-text="LeetCode热题100：前缀和 差分"></span>
           
         </div>
 
@@ -214,8 +215,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-05-03 00:20" pubdate>
-          2025年5月3日 凌晨
+        <time datetime="2025-05-03 19:34" pubdate>
+          2025年5月3日 晚上
         </time>
       </span>
     
@@ -226,7 +227,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          831 字
+          607 字
         
       </span>
     
@@ -237,7 +238,7 @@
         
         
         
-          7 分钟
+          6 分钟
         
       </span>
     
@@ -274,12 +275,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">LeetCode热题100：哈希</h1>
+            <h1 id="seo-header">LeetCode热题100：前缀和 差分</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="leetcode热题100哈希">LeetCode热题100：哈希</h1>
+                <h1 id="leetcode热题100前缀和-差分">LeetCode热题100：前缀和 差分</h1>
 <h2 id="摘要">摘要</h2>
 <table>
 
@@ -292,59 +293,37 @@
 <tbody>
 <tr>
 <td><a
-target="_blank" rel="noopener" href="https://leetcode.cn/problems/two-sum/?envType=study-plan-v2&amp;envId=top-100-liked">1.
-两数之和 - 力扣（LeetCode）</a></td>
-<td>哈希优化查找</td>
+target="_blank" rel="noopener" href="https://leetcode.cn/problems/merge-intervals/?envType=study-plan-v2&amp;envId=top-100-liked">56.
+合并区间 - 力扣（LeetCode）</a></td>
+<td>差分，排序</td>
 </tr>
 <tr>
 <td><a
-target="_blank" rel="noopener" href="https://leetcode.cn/problems/group-anagrams/?envType=study-plan-v2&amp;envId=top-100-liked">49.
-字母异位词分组 - 力扣（LeetCode）</a></td>
-<td>哈希表</td>
-</tr>
-<tr>
-<td><a
-target="_blank" rel="noopener" href="https://leetcode.cn/problems/longest-consecutive-sequence/?envType=study-plan-v2&amp;envId=top-100-liked">128.
-最长连续序列 - 力扣（LeetCode）</a></td>
-<td>哈希优化查找</td>
-</tr>
-<tr>
-<td><a
-target="_blank" rel="noopener" href="https://leetcode.cn/problems/subarray-sum-equals-k/description/?envType=study-plan-v2&amp;envId=top-100-liked">560.
-和为 K 的子数组 - 力扣（LeetCode）</a></td>
-<td>哈希，前缀和</td>
+target="_blank" rel="noopener" href="https://leetcode.cn/problems/product-of-array-except-self/?envType=study-plan-v2&amp;envId=top-100-liked">238.
+除自身以外数组的乘积 - 力扣（LeetCode）</a></td>
+<td>前缀和</td>
 </tr>
 </tbody>
 </table>
-<h2 id="两数之和">两数之和</h2>
-<p>给定一个整数数组 <code>nums</code> 和一个整数目标值
-<code>target</code>，请你在该数组中找出 <strong>和为目标值</strong>
-<em><code>target</code></em> 的那 <strong>两个</strong>
-整数，并返回它们的数组下标。</p>
-<p>你可以假设每种输入只会对应一个答案，并且你不能使用两次相同的元素。</p>
-<p>你可以按任意顺序返回答案。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>	unordered_map&lt;<span class="hljs-type">int</span>, <span class="hljs-type">int</span>&gt; mp;<br>	<span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">twoSum</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums, <span class="hljs-type">int</span> target)</span> </span>&#123;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span> ; i &lt; nums.<span class="hljs-built_in">size</span>() ; i ++)&#123;<br>			mp[nums[i]] = i;<br>		&#125;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span> ; i &lt; nums.<span class="hljs-built_in">size</span>() ; i ++)&#123;<br>			<span class="hljs-keyword">if</span>(mp.<span class="hljs-built_in">count</span>(target-nums[i]) &amp;&amp; mp[target-nums[i]] != i)&#123;<br>				<span class="hljs-keyword">return</span> &#123;i, mp[target-nums[i]]&#125;;<br>			&#125;<br>		&#125;<br>		<span class="hljs-keyword">return</span> &#123;&#125;;<br>	&#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
-<h2 id="字母异位词分组">字母异位词分组</h2>
-<p>给你一个字符串数组，请你将 <strong>字母异位词</strong>
-组合在一起。可以按任意顺序返回结果列表。</p>
-<p><strong>字母异位词</strong>
-是由重新排列源单词的所有字母得到的一个新单词。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>	vector&lt;vector&lt;string&gt;&gt; <span class="hljs-built_in">groupAnagrams</span>(vector&lt;string&gt;&amp; strs) &#123;<br>        <span class="hljs-comment">// 以字母排序后的结果为key，用map对字母异位词进行分组。</span><br>		unordered_map&lt;string, <span class="hljs-type">int</span>&gt; mp;<br>		vector&lt;vector&lt;string &gt; &gt; ans;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">auto</span> it : strs)&#123;<br>			string s = it;<br>			<span class="hljs-built_in">sort</span>(s.<span class="hljs-built_in">begin</span>(), s.<span class="hljs-built_in">end</span>());<br>			<span class="hljs-keyword">if</span>(mp.<span class="hljs-built_in">count</span>(s))&#123;<br>				ans[mp[s]].<span class="hljs-built_in">push_back</span>(it);<br>			&#125;<span class="hljs-keyword">else</span>&#123;<br>				mp[s] = ans.<span class="hljs-built_in">size</span>();<br>				ans.<span class="hljs-built_in">push_back</span>(&#123;it&#125;);<br>			&#125;<br>		&#125;<br>		<span class="hljs-keyword">return</span> ans;<br>	&#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
-<h2 id="最长连续序列">最长连续序列</h2>
-<p>给定一个未排序的整数数组 <code>nums</code>
-，找出数字连续的最长序列（不要求序列元素在原数组中连续）的长度。</p>
-<p>请你设计并实现时间复杂度为 <code>O(n)</code> 的算法解决此问题。</p>
-<p>1）排序 + 去重</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">longestConsecutive</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums)</span> </span>&#123;<br>		<span class="hljs-built_in">sort</span>(nums.<span class="hljs-built_in">begin</span>(), nums.<span class="hljs-built_in">end</span>());<br>		nums.<span class="hljs-built_in">erase</span>(<span class="hljs-built_in">unique</span>(nums.<span class="hljs-built_in">begin</span>(), nums.<span class="hljs-built_in">end</span>()), nums.<span class="hljs-built_in">end</span>());<br>		<span class="hljs-keyword">if</span>(nums.<span class="hljs-built_in">empty</span>()) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>		<span class="hljs-type">int</span> ans = <span class="hljs-number">1</span>;<br>		<span class="hljs-type">int</span> cnt = <span class="hljs-number">1</span>;<br>        <span class="hljs-comment">// 排序后已经是上升数组了</span><br>        <span class="hljs-comment">// 检查每个连续区间有多长即可</span><br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span> ; i &lt; nums.<span class="hljs-built_in">size</span>() ; i ++)&#123;<br>			<span class="hljs-keyword">if</span>(nums[i] == nums[i<span class="hljs-number">-1</span>] + <span class="hljs-number">1</span>)&#123;<br>				cnt++;<br>				ans = <span class="hljs-built_in">max</span>(ans, cnt);<br>			&#125;<span class="hljs-keyword">else</span>&#123;<br>				cnt = <span class="hljs-number">1</span>;<br>			&#125;<br>		&#125;<br>		<span class="hljs-keyword">return</span> ans;<br>	&#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
-<p>2）哈希</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">longestConsecutive</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums)</span> </span>&#123;<br>        <span class="hljs-comment">//st去重</span><br>        unordered_set&lt;<span class="hljs-type">int</span>&gt; st;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">const</span> <span class="hljs-keyword">auto</span> &amp; it : nums)&#123;<br>			st.<span class="hljs-built_in">insert</span>(it);<br>		&#125;<br>        <span class="hljs-type">int</span> ans = <span class="hljs-number">0</span>;<br>        <span class="hljs-comment">// 若st-1存在，说明是起点，检查该上升序列有多长；</span><br>        <span class="hljs-comment">// 若st-1不存，说明不是起点，下一个。</span><br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">const</span> <span class="hljs-keyword">auto</span> &amp; it : st)&#123;<br>			<span class="hljs-keyword">if</span>(!st.<span class="hljs-built_in">count</span>(it<span class="hljs-number">-1</span>))&#123;<br>				<span class="hljs-type">int</span> x = it;<br>				<span class="hljs-type">int</span> cnt = <span class="hljs-number">1</span>;<br>				<span class="hljs-keyword">while</span>(st.<span class="hljs-built_in">count</span>(x<span class="hljs-number">+1</span>))&#123;<br>					cnt += <span class="hljs-number">1</span>;<br>					x += <span class="hljs-number">1</span>;<br>				&#125;<br>				ans = <span class="hljs-built_in">max</span>(cnt, ans);<br>			&#125;<br>		&#125;<br>		<span class="hljs-keyword">return</span> ans;<br>	&#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
-<h2 id="和为-k-的子数组">和为 K 的子数组</h2>
-<p>给你一个整数数组 <code>nums</code> 和一个整数 <code>k</code>
-，请你统计并返回 <em>该数组中和为 <code>k</code> 的子数组的个数</em>
-。</p>
-<p>子数组是数组中元素的连续非空序列。</p>
-<p>前缀和，哈希：O(N*logN)</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">subarraySum</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums, <span class="hljs-type">int</span> k)</span> </span>&#123;<br>		<span class="hljs-type">int</span> ans = <span class="hljs-number">0</span>;<br>		<span class="hljs-type">int</span> pre = <span class="hljs-number">0</span>;<br>		unordered_map&lt;<span class="hljs-type">int</span>, <span class="hljs-type">int</span>&gt; mp;<br>		<span class="hljs-comment">// 用哈希表记录某个前缀和数值出现了多少次</span><br>		<span class="hljs-comment">// 每次查询pre-k是否存在即可</span><br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span> ; i &lt; nums.<span class="hljs-built_in">size</span>() ; i ++)&#123;<br>			pre += nums[i];<br>			<span class="hljs-keyword">if</span>(pre == k) ans++;<br>			<span class="hljs-keyword">if</span>(mp.<span class="hljs-built_in">count</span>(pre-k))&#123;<br>				ans += mp[pre-k];<br>			&#125;<br>			mp[pre] = mp[pre] + <span class="hljs-number">1</span>;<br>		&#125;<br>		<span class="hljs-keyword">return</span> ans;<br>	&#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+<h2 id="合并区间">合并区间</h2>
+<p>以数组 <code>intervals</code> 表示若干个区间的集合，其中单个区间为
+<code>intervals[i] = [starti, endi]</code>
+。请你合并所有重叠的区间，并返回
+<em>一个不重叠的区间数组，该数组需恰好覆盖输入中的所有区间</em> 。</p>
+<p>1）差分</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>	vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt; <span class="hljs-built_in">merge</span>(vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt;&amp; v) &#123;<br>		<span class="hljs-function">vector&lt;<span class="hljs-type">int</span> &gt; <span class="hljs-title">diff</span><span class="hljs-params">(<span class="hljs-number">20010</span>)</span></span>;<br>		vector&lt;vector&lt;<span class="hljs-type">int</span>&gt; &gt; ans;<br>		<span class="hljs-comment">// 对于[1,2], [3,4]的情况，本题需要分别输出。</span><br>		<span class="hljs-comment">// 通过对每个区间[L,R]*2，分隔2个区间</span><br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span> ; i &lt; v.<span class="hljs-built_in">size</span>() ; i ++)&#123;<br>			<span class="hljs-type">int</span> l = v[i][<span class="hljs-number">0</span>]*<span class="hljs-number">2</span>;<br>			<span class="hljs-type">int</span> r = v[i][<span class="hljs-number">1</span>]*<span class="hljs-number">2</span>;<br>			diff[l]++;<br>			diff[r<span class="hljs-number">+1</span>]--;<br>		&#125;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span> ; i &lt; diff.<span class="hljs-built_in">size</span>() ; i ++)&#123;<br>			diff[i] += diff[i<span class="hljs-number">-1</span>];<br>		&#125;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span> ; i &lt; diff.<span class="hljs-built_in">size</span>() ; i++)&#123;<br>			<span class="hljs-keyword">if</span>(diff[i] != <span class="hljs-number">0</span>)&#123;<br>				<span class="hljs-type">int</span> j = i<span class="hljs-number">+1</span>;<br>				<span class="hljs-keyword">while</span>(diff[j] != <span class="hljs-number">0</span>) j++;<br>				ans.<span class="hljs-built_in">push_back</span>(&#123;i/<span class="hljs-number">2</span>, (j<span class="hljs-number">-1</span>)/<span class="hljs-number">2</span>&#125;);<br>				i = j;<br>				<span class="hljs-keyword">continue</span>;<br>			&#125;<br>		&#125;<br>		<span class="hljs-keyword">return</span> ans;<br>	&#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+<p>2）排序</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>	vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt; <span class="hljs-built_in">merge</span>(vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt;&amp; v) &#123;<br>		vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt; ans;<br>		<span class="hljs-built_in">sort</span>(v.<span class="hljs-built_in">begin</span>(), v.<span class="hljs-built_in">end</span>());<br>        <span class="hljs-comment">// 排序后，记录重叠数组即可</span><br>		<span class="hljs-type">int</span> l = v[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>], r = v[<span class="hljs-number">0</span>][<span class="hljs-number">1</span>];<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span> ; i &lt; v.<span class="hljs-built_in">size</span>() ; i ++)&#123;<br>			<span class="hljs-keyword">if</span>(v[i][<span class="hljs-number">0</span>] &lt;= r)&#123;<br>				r = <span class="hljs-built_in">max</span>(r, v[i][<span class="hljs-number">1</span>]);<br>			&#125;<span class="hljs-keyword">else</span>&#123;<br>				ans.<span class="hljs-built_in">push_back</span>(&#123;l, r&#125;);<br>				l = v[i][<span class="hljs-number">0</span>]; r = v[i][<span class="hljs-number">1</span>];<br>			&#125;<br>		&#125;<br>		ans.<span class="hljs-built_in">push_back</span>(&#123;l, r&#125;);<br>		<span class="hljs-keyword">return</span> ans;<br>	&#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+<h2 id="除自身以外数组的乘积">除自身以外数组的乘积</h2>
+<p>给你一个整数数组 <code>nums</code>，返回 数组 <code>answer</code>
+，其中 <code>answer[i]</code> 等于 <code>nums</code> 中除
+<code>nums[i]</code> 之外其余各元素的乘积 。</p>
+<p>题目数据 <strong>保证</strong> 数组
+<code>nums</code>之中任意元素的全部前缀元素和后缀的乘积都在 <strong>32
+位</strong> 整数范围内。</p>
+<p>请 <strong>不要使用除法，</strong>且在 <code>O(n)</code>
+时间复杂度内完成此题。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">productExceptSelf</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums)</span> </span>&#123;<br>		<span class="hljs-function">vector&lt;<span class="hljs-type">int</span> &gt; <span class="hljs-title">pre</span><span class="hljs-params">(nums.size())</span>, <span class="hljs-title">back</span><span class="hljs-params">(nums.size())</span></span>;<br>		vector&lt;<span class="hljs-type">int</span> &gt; ans;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span> ; i &lt; nums.<span class="hljs-built_in">size</span>() ; i ++)&#123;<br>			<span class="hljs-keyword">if</span>(i == <span class="hljs-number">0</span>) pre[i] = nums[i];<br>			<span class="hljs-keyword">else</span> pre[i] = nums[i]*pre[i<span class="hljs-number">-1</span>];<br>		&#125;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = nums.<span class="hljs-built_in">size</span>()<span class="hljs-number">-1</span> ; i &gt;= <span class="hljs-number">0</span> ; i --)&#123;<br>			<span class="hljs-keyword">if</span>(i == nums.<span class="hljs-built_in">size</span>()<span class="hljs-number">-1</span>) back[i] = nums[i];<br>			<span class="hljs-keyword">else</span> back[i] = nums[i]*back[i<span class="hljs-number">+1</span>];<br>		&#125;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span> ; i &lt; nums.<span class="hljs-built_in">size</span>() ; i ++)&#123;<br>			<span class="hljs-type">int</span> l = i == <span class="hljs-number">0</span> ? <span class="hljs-number">1</span> : pre[i<span class="hljs-number">-1</span>];<br>			<span class="hljs-type">int</span> r = i == nums.<span class="hljs-built_in">size</span>()<span class="hljs-number">-1</span> ? <span class="hljs-number">1</span> : back[i<span class="hljs-number">+1</span>];<br>			ans.<span class="hljs-built_in">push_back</span>(l*r);<br>		&#125;<br>		<span class="hljs-keyword">return</span> ans;<br>	&#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
 
                 
               </div>
@@ -371,13 +350,6 @@ target="_blank" rel="noopener" href="https://leetcode.cn/problems/subarray-sum-e
   <a href="/categories/%E9%A2%98%E8%A7%A3/%E7%83%AD%E9%A2%98100/" class="category-chain-item">热题100</a>
   
   
-    <span>></span>
-    
-  <a href="/categories/%E9%A2%98%E8%A7%A3/%E7%83%AD%E9%A2%98100/LeetCode/" class="category-chain-item">LeetCode</a>
-  
-  
-
-  
 
   
 
@@ -392,9 +364,11 @@ target="_blank" rel="noopener" href="https://leetcode.cn/problems/subarray-sum-e
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/LeetCode/" class="print-no-link">#LeetCode</a>
+        <a href="/tags/%E5%89%8D%E7%BC%80%E5%92%8C/" class="print-no-link">#前缀和</a>
       
-        <a href="/tags/%E5%93%88%E5%B8%8C/" class="print-no-link">#哈希</a>
+        <a href="/tags/%E5%B7%AE%E5%88%86/" class="print-no-link">#差分</a>
+      
+        <a href="/tags/LeetCode/" class="print-no-link">#LeetCode</a>
       
     </div>
   
@@ -406,8 +380,8 @@ target="_blank" rel="noopener" href="https://leetcode.cn/problems/subarray-sum-e
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>LeetCode热题100：哈希</div>
-      <div>https://czwcugb.github.io/题解/leetcode/hot-100/hash/</div>
+      <div>LeetCode热题100：前缀和 差分</div>
+      <div>https://czwcugb.github.io/题解/leetcode/hot-100/prefix-diff/</div>
     </div>
     <div class="license-meta">
       
@@ -451,9 +425,9 @@ target="_blank" rel="noopener" href="https://leetcode.cn/problems/subarray-sum-e
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/%E9%A2%98%E8%A7%A3/leetcode/hot-100/double-pointer/" title="LeetCode热题100：双指针">
+                      <a href="/%E9%A2%98%E8%A7%A3/leetcode/hot-100/data-structure/" title="LeetCode热题100：字符串">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">LeetCode热题100：双指针</span>
+                        <span class="hidden-mobile">LeetCode热题100：字符串</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -461,8 +435,8 @@ target="_blank" rel="noopener" href="https://leetcode.cn/problems/subarray-sum-e
                   <article class="post-next col-6">
                     
                     
-                      <a href="/%E9%A2%98%E8%A7%A3/leetcode/hot-100/dp/" title="LeetCode热题100：动态规划">
-                        <span class="hidden-mobile">LeetCode热题100：动态规划</span>
+                      <a href="/%E9%A2%98%E8%A7%A3/leetcode/hot-100/double-pointer/" title="LeetCode热题100：双指针">
+                        <span class="hidden-mobile">LeetCode热题100：双指针</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
