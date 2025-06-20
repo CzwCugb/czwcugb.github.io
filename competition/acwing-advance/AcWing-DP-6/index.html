@@ -1,0 +1,797 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/profile_photo.png">
+  <link rel="icon" href="/img/profile_photo.jpg">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="ChenZhiwei">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="摘要 1068. 环形石子合并 - AcWing题库：区间DP + 断环成链 + 前缀和 320. 能量项链 - AcWing题库：区间DP + 断环成链 479. 加分二叉树 - AcWing题库：区间DP + 二叉树遍历 1069. 凸多边形的划分 - AcWing题库：区间DP + 三角剖分 + 高精度 321. 棋盘分割 - AcWing题库：二维区间DP 1068">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AcWing算法提高课：动态规划6-区间DP">
+<meta property="og:url" content="https://czwcugb.github.io/competition/acwing-advance/AcWing-DP-6/index.html">
+<meta property="og:site_name" content="陈志伟的个人博客">
+<meta property="og:description" content="摘要 1068. 环形石子合并 - AcWing题库：区间DP + 断环成链 + 前缀和 320. 能量项链 - AcWing题库：区间DP + 断环成链 479. 加分二叉树 - AcWing题库：区间DP + 二叉树遍历 1069. 凸多边形的划分 - AcWing题库：区间DP + 三角剖分 + 高精度 321. 棋盘分割 - AcWing题库：二维区间DP 1068">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://czwcugb.github.io/competition/acwing-advance/AcWing-DP-6/55909_f09eb023fb-IMG_6B91346846EE-1.jpeg">
+<meta property="article:published_time" content="2025-02-11T14:12:05.000Z">
+<meta property="article:modified_time" content="2025-05-29T16:09:40.889Z">
+<meta property="article:author" content="ChenZhiwei">
+<meta property="article:tag" content="动态规划">
+<meta property="article:tag" content="AcWing">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://czwcugb.github.io/competition/acwing-advance/AcWing-DP-6/55909_f09eb023fb-IMG_6B91346846EE-1.jpeg">
+  
+  
+  
+  <title>AcWing算法提高课：动态规划6-区间DP - 陈志伟的个人博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"czwcugb.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>陈志伟的个人博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/background.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="AcWing算法提高课：动态规划6-区间DP"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-02-11 22:12" pubdate>
+          2025年2月11日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.9k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          17 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">AcWing算法提高课：动态规划6-区间DP</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="摘要">摘要</h1>
+<p><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/1070/">1068.
+环形石子合并 - AcWing题库</a>：区间DP + 断环成链 + 前缀和</p>
+<p><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/322/">320. 能量项链 -
+AcWing题库</a>：区间DP + 断环成链</p>
+<p><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/481/">479. 加分二叉树
+- AcWing题库</a>：区间DP + 二叉树遍历</p>
+<p><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/1071/">1069.
+凸多边形的划分 - AcWing题库</a>：区间DP + 三角剖分 + 高精度</p>
+<p><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/323/">321. 棋盘分割 -
+AcWing题库</a>：二维区间DP</p>
+<h1 id="环形石子合并">1068 环形石子合并</h1>
+<p>将 n 堆石子绕圆形操场排放，现要将石子有序地合并成一堆。</p>
+<p>规定每次只能选相邻的两堆合并成新的一堆，并将新的一堆的石子数记做该次合并的得分。</p>
+<p>请编写一个程序，读入堆数 n 及每堆的石子数，并进行如下计算：</p>
+<ul>
+<li>选择一种合并石子的方案，使得做 n−1 次合并得分总和最大。</li>
+<li>选择一种合并石子的方案，使得做 n−1 次合并得分总和最小。</li>
+</ul>
+<h2 id="题解">题解</h2>
+<p>最小值状态转移方程： <span class="math display">\[
+dp[l][r] = min(dp[l][r], dp[l][k] + dp[k][r] + \sum_{l}^{r}a[i])
+\]</span> 最大值状态转移方程： <span class="math display">\[
+dp[l][r] = max(dp[l][r], dp[l][k] + dp[k][r] + \sum_{l}^{r}a[i])
+\]</span> <span class="math inline">\(dp[l][r]\)</span> 表示合并 l 到 r
+个石子需要的花销。此处，遍历划分点k，可以得到每个区间的最优解。</p>
+<p>注意：这里的求和需要用前缀和优化。</p>
+<h2 id="代码">代码</h2>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-type">const</span> <span class="hljs-type">int</span> inf = <span class="hljs-number">0x3f3f3f3f</span>;<br><span class="hljs-type">const</span> <span class="hljs-type">int</span> maxn = <span class="hljs-number">500</span>;<br><br><span class="hljs-type">int</span> n,a[maxn],prefix[maxn];<br><span class="hljs-type">int</span> dp1[maxn][maxn],dp2[maxn][maxn];<br><span class="hljs-type">int</span> ma,mi;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span></span>&#123;<br>	cin&gt;&gt;n;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span> ; i &lt;= n ; i ++)&#123;<br>		cin&gt;&gt;a[i]; a[i+n] = a[i];<br>	&#125;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span> ; i &lt;= <span class="hljs-number">2</span>*n ; i ++)&#123;<br>		prefix[i] = prefix[i<span class="hljs-number">-1</span>] + a[i];<br>	&#125;<br>	<span class="hljs-built_in">memset</span>(dp1,inf,<span class="hljs-built_in">sizeof</span>(dp1));<br>	<span class="hljs-built_in">memset</span>(dp2,-inf,<span class="hljs-built_in">sizeof</span>(dp2));<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span> ; i &lt;= <span class="hljs-number">2</span>*n ; i ++)&#123;<br>		dp1[i][i] = dp2[i][i] = <span class="hljs-number">0</span>;<br>	&#125;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">2</span> ; i &lt;= n ; i ++)&#123;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j = <span class="hljs-number">1</span>; j+i<span class="hljs-number">-1</span> &lt; <span class="hljs-number">2</span>*n ; j ++)&#123;<br>			<span class="hljs-type">int</span> l = j;<br>			<span class="hljs-type">int</span> r = j+i<span class="hljs-number">-1</span>;<br>			<span class="hljs-type">int</span> sum = prefix[r] - prefix[l<span class="hljs-number">-1</span>];<br>			<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> k = l ; k &lt; r;  k ++)&#123;<br>				dp1[l][r] = <span class="hljs-built_in">min</span>(dp1[l][r], dp1[l][k] + dp1[k<span class="hljs-number">+1</span>][r] + sum);<br>				dp2[l][r] = <span class="hljs-built_in">max</span>(dp2[l][r], dp2[l][k] + dp2[k<span class="hljs-number">+1</span>][r] + sum);<br>			&#125;<br>		&#125;<br>	&#125;<br>	ma = -inf; mi = inf;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span> ; i+n<span class="hljs-number">-1</span> &lt; <span class="hljs-number">2</span>*n ; i ++)&#123;<br>		mi = <span class="hljs-built_in">min</span>(mi, dp1[i][i+n<span class="hljs-number">-1</span>]);<br>		ma = <span class="hljs-built_in">max</span>(ma, dp2[i][i+n<span class="hljs-number">-1</span>]);<br>	&#125;<br>	cout&lt;&lt;mi&lt;&lt;<span class="hljs-string">&quot;\n&quot;</span>&lt;&lt;ma;<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h1 id="能量项链">320 能量项链</h1>
+<p>如果前一颗能量珠的头标记为 m，尾标记为 r，后一颗能量珠的头标记为
+r，尾标记为 n，则聚合后释放的能量为 m×r×n，新产生的珠子的头标记为
+m，尾标记为 n。</p>
+<p>例如：((4⊕1)⊕2)⊕3)=10×2×3+10×3×5+10×5×10=710</p>
+<p>显然，不同的聚合顺序得到的总能量是不同的，请求出一串项链释放出的最大总能量。</p>
+<h2 id="题解-1">题解</h2>
+<p><span class="math display">\[
+dp[l][r] = max(dp[l][r], dp[l][k] + dp[k+1][r] + h[l]*h[k+1]*h[r+1])
+\]</span></p>
+<p><span class="math inline">\(dp[l][r]\)</span> 表示合并 l 到 r
+个珠子释放出的最大能量，<span class="math inline">\(h[i]\)</span>表示某个珠子的头标记，<span class="math inline">\(h[i+1]\)</span>恰好是尾标记。</p>
+<p>此处，遍历划分点k，可以得到每个区间的最大值。</p>
+<h2 id="代码-1">代码</h2>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">using</span> ll = <span class="hljs-type">long</span> <span class="hljs-type">long</span>;<br><span class="hljs-type">const</span> <span class="hljs-type">int</span> maxn = <span class="hljs-number">205</span>;<br><br><span class="hljs-type">int</span> n,ans;<br><span class="hljs-type">int</span> h[maxn],dp[maxn][maxn];<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span></span>&#123;<br>	cin&gt;&gt;n;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span> ; i &lt;= n ; i ++)&#123;<br>		cin&gt;&gt;h[i];<br>		h[i+n] = h[i];<br>	&#125;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">2</span> ; i &lt;= n ; i ++)&#123;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j = <span class="hljs-number">1</span> ; j+i<span class="hljs-number">-1</span> &lt; <span class="hljs-number">2</span>*n ; j ++)&#123;<br>			<span class="hljs-type">int</span> l = j;<br>			<span class="hljs-type">int</span> r = j+i<span class="hljs-number">-1</span>;<br>			<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> k = l ; k &lt; r ; k ++)&#123;<br>				dp[l][r] = <span class="hljs-built_in">max</span>(dp[l][r], dp[l][k] + dp[k<span class="hljs-number">+1</span>][r] + h[l]*h[k<span class="hljs-number">+1</span>]*h[r<span class="hljs-number">+1</span>]);<br>			&#125;<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span> ; i+n<span class="hljs-number">-1</span> &lt; <span class="hljs-number">2</span>*n ; i ++)&#123;<br>		ans = <span class="hljs-built_in">max</span>(ans,dp[i][i+n<span class="hljs-number">-1</span>]);<br>	&#125;<br>	cout&lt;&lt;ans;<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h1 id="加分二叉树">479 加分二叉树</h1>
+<p>在一颗二叉树tree中，任一棵子树 subtree（也包含 tree
+本身）的加分计算方法如下：     </p>
+<p>subtree的左子树的加分 × subtree的右子树的加分 ＋
+subtree的根的分数 </p>
+<p>tree的中序遍历为（1,2,3,…,n），现在给定每个节点的加分，要求输出： </p>
+<p>（1）tree的最高加分 </p>
+<p>（2）tree的前序遍历</p>
+<h2 id="题解-2">题解</h2>
+<p>状态转移方程： <span class="math display">\[
+dp[l][r] = dp[l][k-1]*dp[k+1][r] + w[k];
+\]</span> 此处，<span class="math inline">\(dp[l][r]\)</span>表示从区间<span class="math inline">\([l, r]\)</span>的最优解。
+由于中序遍历的特殊性质，划分区间的点k恰好是子树的根，</p>
+<p>我们在状态转移的过程中，记录最优解下的根为<span class="math inline">\(root[l][r]\)</span>，最后可以重构二叉树，输出前序遍历。</p>
+<h2 id="代码-2">代码</h2>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-type">const</span> <span class="hljs-type">int</span> maxn = <span class="hljs-number">100</span>;<br><br><span class="hljs-type">int</span> n,cnt;<br><span class="hljs-type">int</span> w[maxn], pre[maxn], dp[maxn][maxn], root[maxn][maxn];<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">pre_order</span><span class="hljs-params">(<span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r)</span></span>&#123;<br>	<span class="hljs-keyword">if</span>(l &gt; r) <span class="hljs-keyword">return</span>;<br>	<span class="hljs-type">int</span> k = root[l][r];<br>	cout&lt;&lt;k&lt;&lt;<span class="hljs-string">&quot; &quot;</span>;<br>	<span class="hljs-built_in">pre_order</span>(l, k<span class="hljs-number">-1</span>);<br>	<span class="hljs-built_in">pre_order</span>(k<span class="hljs-number">+1</span>, r);<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span></span>&#123;<br>	cin&gt;&gt;n;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span> ; i &lt;= n ; i ++)&#123;<br>		cin&gt;&gt;w[i];<br>		dp[i][i] = w[i];<br>		root[i][i] = i;<br>	&#125;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">2</span> ; i &lt;= n ; i ++)&#123;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j = <span class="hljs-number">1</span> ; j+i<span class="hljs-number">-1</span> &lt;= n ; j ++)&#123;<br>			<span class="hljs-type">int</span> l = j;<br>			<span class="hljs-type">int</span> r = j+i<span class="hljs-number">-1</span>;<br>			<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> k = l ; k &lt; r ; k ++)&#123;<br>				<span class="hljs-type">int</span> lt = k<span class="hljs-number">-1</span> &gt;= l ? dp[l][k<span class="hljs-number">-1</span>] : <span class="hljs-number">1</span>;<br>				<span class="hljs-type">int</span> rt = k<span class="hljs-number">+1</span> &lt;= r ? dp[k<span class="hljs-number">+1</span>][r] : <span class="hljs-number">1</span>;<br>				<span class="hljs-keyword">if</span>(lt*rt + w[k] &gt; dp[l][r])&#123;<br>					dp[l][r] = lt*rt + w[k];<br>					root[l][r] = k;<br>				&#125;<br>			&#125;<br>		&#125;<br>	&#125;<br>	cout&lt;&lt;dp[<span class="hljs-number">1</span>][n]&lt;&lt;<span class="hljs-string">&quot;\n&quot;</span>;<br>	<span class="hljs-built_in">pre_order</span>(<span class="hljs-number">1</span>,n);<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h1 id="凸多边形的划分">1069 凸多边形的划分</h1>
+<p>给定一个具有 N 个顶点的凸多边形，每个顶点的权值都是一个正整数。</p>
+<p>将这个凸多边形划分成 N−2
+个互不相交的三角形，对于每个三角形，其三个顶点的权值相乘都可得到一个权值乘积，试求所有三角形的顶点权值乘积之和至少为多少。</p>
+<h2 id="题解-3">题解</h2>
+<p>对于一个区间为[l,
+r]的N边形，都可以用一个内部的三角形（三个点），将其划分为3部分：</p>
+<p>即 l、r和k构成的三角形 + 区间[l, k]的最优解 + 区间[k,
+r]的最优解。</p>
+<figure>
+<img src="/competition/acwing-advance/AcWing-DP-6/55909_f09eb023fb-IMG_6B91346846EE-1.jpeg" srcset="/img/loading.gif" lazyload alt="1069">
+<figcaption aria-hidden="true">1069</figcaption>
+</figure>
+<p>若我们得到两个点l 和
+r，第三个点k有N-2种选择，依次遍历每个选择下的权值，可以得到最优解。
+<span class="math display">\[
+dp[l][r] = min(dp[l][r], dp[l][k] + dp[k][r] + w[l]*w[k]*w[r])
+\]</span> 注意：本题数值较大，需要使用高精度乘法和加分。</p>
+<h2 id="代码-3">代码</h2>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-type">const</span> <span class="hljs-type">int</span> maxn = <span class="hljs-number">205</span>;<br><br><span class="hljs-type">int</span> n;<br>string w[maxn];<br>string dp[maxn][maxn];<br><span class="hljs-type">int</span> a[<span class="hljs-number">1000</span>],b[<span class="hljs-number">1000</span>],c[<span class="hljs-number">1000</span>];<br><br><span class="hljs-function">string <span class="hljs-title">mul</span><span class="hljs-params">(string x, string y)</span> </span>&#123;<br>	<span class="hljs-built_in">memset</span>(a,<span class="hljs-number">0</span>,<span class="hljs-built_in">sizeof</span>(a));<br>	<span class="hljs-built_in">memset</span>(b,<span class="hljs-number">0</span>,<span class="hljs-built_in">sizeof</span>(b));<br>	<span class="hljs-built_in">memset</span>(c,<span class="hljs-number">0</span>,<span class="hljs-built_in">sizeof</span>(c));<br>	string ans = <span class="hljs-string">&quot;&quot;</span>;<br>	<span class="hljs-type">int</span> la = x.<span class="hljs-built_in">length</span>();<br>	<span class="hljs-type">int</span> lb = y.<span class="hljs-built_in">length</span>();<br>	<span class="hljs-type">int</span> lc = la + lb;<br>	<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; la; i++) a[i] = x[la - i - <span class="hljs-number">1</span>] - <span class="hljs-string">&#x27;0&#x27;</span>;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; lb; i++) b[i] = y[lb - <span class="hljs-number">1</span> - i] - <span class="hljs-string">&#x27;0&#x27;</span>;<br><br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; la; i++) &#123;<br>		<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">0</span>; j &lt; lb; j++) &#123;<br>			c[i + j] += a[i] * b[j];<br>			c[i + j + <span class="hljs-number">1</span>] += c[i + j] / <span class="hljs-number">10</span>;<br>			c[i + j] %= <span class="hljs-number">10</span>;<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">while</span> ((c[lc - <span class="hljs-number">1</span>] == <span class="hljs-number">0</span>) &amp;&amp; (lc &gt; <span class="hljs-number">1</span>)) lc--;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = lc- <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--)&#123;<br>		ans.<span class="hljs-built_in">push_back</span>(c[i] + <span class="hljs-string">&#x27;0&#x27;</span>);<br>	&#125;<br>	<span class="hljs-keyword">return</span> ans;<br>&#125;<br><br><span class="hljs-function">string <span class="hljs-title">add</span><span class="hljs-params">(string x, string y)</span> </span>&#123;<br>	<span class="hljs-built_in">memset</span>(a,<span class="hljs-number">0</span>,<span class="hljs-built_in">sizeof</span>(a));<br>	<span class="hljs-built_in">memset</span>(b,<span class="hljs-number">0</span>,<span class="hljs-built_in">sizeof</span>(b));<br>	<span class="hljs-built_in">memset</span>(c,<span class="hljs-number">0</span>,<span class="hljs-built_in">sizeof</span>(c));<br>	<span class="hljs-type">int</span> la = x.<span class="hljs-built_in">length</span>();<br>	<span class="hljs-type">int</span> lb = y.<span class="hljs-built_in">length</span>();<br>	<span class="hljs-type">int</span> lc = <span class="hljs-built_in">max</span>(la, lb); <br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; la; i++) a[i] = x[la - i - <span class="hljs-number">1</span>] - <span class="hljs-string">&#x27;0&#x27;</span>;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; lb; i++) b[i] = y[lb - <span class="hljs-number">1</span> - i] - <span class="hljs-string">&#x27;0&#x27;</span>;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; lc; i++) &#123;<br>		c[i] += a[i] + b[i];<br>		c[i + <span class="hljs-number">1</span>] += c[i]/<span class="hljs-number">10</span>;<br>		c[i] %= <span class="hljs-number">10</span>;<br>	&#125;<br>	lc++;<br>	<span class="hljs-keyword">while</span> (lc &gt; <span class="hljs-number">1</span> &amp;&amp; c[lc<span class="hljs-number">-1</span>] == <span class="hljs-number">0</span>) lc--;<br>	string res = <span class="hljs-string">&quot;&quot;</span>;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = lc<span class="hljs-number">-1</span>; i &gt;= <span class="hljs-number">0</span>; i--)&#123;<br>		res.<span class="hljs-built_in">push_back</span>(<span class="hljs-built_in">char</span>(c[i] + <span class="hljs-string">&#x27;0&#x27;</span>));<br>	&#125;<br>	<span class="hljs-keyword">return</span> res;<br>&#125;<br><br><span class="hljs-function">string <span class="hljs-title">Min</span><span class="hljs-params">(string x, string y)</span></span>&#123;<br>	<span class="hljs-type">int</span> lx = x.<span class="hljs-built_in">size</span>();<br>	<span class="hljs-type">int</span> ly = y.<span class="hljs-built_in">size</span>();<br>	<span class="hljs-keyword">if</span>(lx &gt; ly) <span class="hljs-keyword">return</span> y;<br>	<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(ly &gt; lx) <span class="hljs-keyword">return</span> x;<br>	<span class="hljs-keyword">else</span>&#123;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span> ; i &lt; lx ; i ++)&#123;<br>			<span class="hljs-keyword">if</span>(x[i] &lt; y[i]) <span class="hljs-keyword">return</span> x;<br>			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(x[i] &gt; y[i]) <span class="hljs-keyword">return</span> y;<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">return</span> x;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span></span>&#123;<br>	cin&gt;&gt;n;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span> ; i &lt;= n ; i ++)&#123;<br>		cin&gt;&gt;w[i];<br>	&#125;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">3</span> ; i &lt;= n ; i ++)&#123;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j = <span class="hljs-number">1</span> ; j+i<span class="hljs-number">-1</span> &lt;= n ; j ++)&#123;<br>			<span class="hljs-type">int</span> l = j;<br>			<span class="hljs-type">int</span> r = j+i<span class="hljs-number">-1</span>;<br>			<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> k = l<span class="hljs-number">+1</span> ; k &lt; r ; k ++)&#123;<br>				string sum = <span class="hljs-built_in">mul</span>(<span class="hljs-built_in">mul</span>(w[l],w[k]),w[r]);<br>				<span class="hljs-keyword">if</span>(dp[l][r].<span class="hljs-built_in">empty</span>()) dp[l][r] = <span class="hljs-built_in">add</span>(dp[l][k], <span class="hljs-built_in">add</span>(dp[k][r], sum));<br>				<span class="hljs-keyword">else</span> dp[l][r] = <span class="hljs-built_in">Min</span>(dp[l][r], <span class="hljs-built_in">add</span>(dp[l][k], <span class="hljs-built_in">add</span>(dp[k][r], sum)));<br>			&#125;<br>		&#125;<br>	&#125;<br>	cout&lt;&lt;dp[<span class="hljs-number">1</span>][n];<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%A2%98%E8%A7%A3/" class="category-chain-item">题解</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E9%A2%98%E8%A7%A3/AcWing/" class="category-chain-item">AcWing</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E9%A2%98%E8%A7%A3/AcWing/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="category-chain-item">动态规划</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="print-no-link">#动态规划</a>
+      
+        <a href="/tags/AcWing/" class="print-no-link">#AcWing</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>AcWing算法提高课：动态规划6-区间DP</div>
+      <div>https://czwcugb.github.io/competition/acwing-advance/AcWing-DP-6/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>ChenZhiwei</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年2月11日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/competition/GPLT/GPLT-String-Array/" title="GPLT团体程序设计天梯赛分类练习1：字符串+二维数组">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">GPLT团体程序设计天梯赛分类练习1：字符串+二维数组</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/competition/acwing-advance/AcWing-DP-5/" title="AcWing算法提高课：动态规划5-状态压缩DP">
+                        <span class="hidden-mobile">AcWing算法提高课：动态规划5-状态压缩DP</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
