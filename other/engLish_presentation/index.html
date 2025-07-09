@@ -21,24 +21,22 @@
   <meta name="author" content="ChenZhiwei">
   <meta name="keywords" content="">
   
-    <meta name="description" content="LeetCode热题100：前缀和 差分 摘要     题目 知识点     56. 合并区间 - 力扣（LeetCode） 差分，排序   238. 除自身以外数组的乘积 - 力扣（LeetCode） 前缀和    合并区间 以数组 intervals 表示若干个区间的集合，其中单个区间为 intervals[i] &#x3D; [starti, endi">
+    <meta name="description" content="英语面试常见题整理 1 自我介绍 ​ Good morning&#x2F;afternoon, dear professors. It is my honor to be here for this interview. ​ My name is Chen Zhiwei. I am majoring in Software Engineering now. And I am going to gr">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode热题100：前缀和 差分">
-<meta property="og:url" content="https://czwcugb.github.io/competition/leetcode/hot-100/prefix-diff/index.html">
+<meta property="og:title" content="英语面试常见题整理">
+<meta property="og:url" content="https://czwcugb.github.io/other/engLish_presentation/index.html">
 <meta property="og:site_name" content="陈志伟的个人博客">
-<meta property="og:description" content="LeetCode热题100：前缀和 差分 摘要     题目 知识点     56. 合并区间 - 力扣（LeetCode） 差分，排序   238. 除自身以外数组的乘积 - 力扣（LeetCode） 前缀和    合并区间 以数组 intervals 表示若干个区间的集合，其中单个区间为 intervals[i] &#x3D; [starti, endi">
+<meta property="og:description" content="英语面试常见题整理 1 自我介绍 ​ Good morning&#x2F;afternoon, dear professors. It is my honor to be here for this interview. ​ My name is Chen Zhiwei. I am majoring in Software Engineering now. And I am going to gr">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-05-03T11:34:00.000Z">
-<meta property="article:modified_time" content="2025-07-08T05:06:56.236Z">
+<meta property="article:published_time" content="2025-07-09T13:42:00.000Z">
+<meta property="article:modified_time" content="2025-07-09T13:43:35.577Z">
 <meta property="article:author" content="ChenZhiwei">
-<meta property="article:tag" content="前缀和">
-<meta property="article:tag" content="差分">
-<meta property="article:tag" content="LeetCode">
+<meta property="article:tag" content="英语面试">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>LeetCode热题100：前缀和 差分 - 陈志伟的个人博客</title>
+  <title>英语面试常见题整理 - 陈志伟的个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -204,7 +202,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="LeetCode热题100：前缀和 差分"></span>
+            <span id="subtitle" data-typed-text="英语面试常见题整理"></span>
           
         </div>
 
@@ -215,8 +213,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-05-03 19:34" pubdate>
-          2025年5月3日 晚上
+        <time datetime="2025-07-09 21:42" pubdate>
+          2025年7月9日 晚上
         </time>
       </span>
     
@@ -227,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          610 字
+          102 字
         
       </span>
     
@@ -238,7 +236,7 @@
         
         
         
-          6 分钟
+          1 分钟
         
       </span>
     
@@ -275,53 +273,81 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">LeetCode热题100：前缀和 差分</h1>
+            <h1 id="seo-header">英语面试常见题整理</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="leetcode热题100前缀和-差分">LeetCode热题100：前缀和 差分</h1>
-<h2 id="摘要">摘要</h2>
-<table>
-
-<thead>
-<tr>
-<th>题目</th>
-<th>知识点</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/merge-intervals/?envType=study-plan-v2&amp;envId=top-100-liked">56.
-合并区间 - 力扣（LeetCode）</a></td>
-<td>差分，排序</td>
-</tr>
-<tr>
-<td><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/product-of-array-except-self/?envType=study-plan-v2&amp;envId=top-100-liked">238.
-除自身以外数组的乘积 - 力扣（LeetCode）</a></td>
-<td>前缀和</td>
-</tr>
-</tbody>
-</table>
-<h2 id="合并区间">合并区间</h2>
-<p>以数组 <code>intervals</code> 表示若干个区间的集合，其中单个区间为
-<code>intervals[i] = [starti, endi]</code>
-。请你合并所有重叠的区间，并返回
-<em>一个不重叠的区间数组，该数组需恰好覆盖输入中的所有区间</em> 。</p>
-<p>1）差分</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>	vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt; <span class="hljs-built_in">merge</span>(vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt;&amp; v) &#123;<br>		<span class="hljs-function">vector&lt;<span class="hljs-type">int</span> &gt; <span class="hljs-title">diff</span><span class="hljs-params">(<span class="hljs-number">20010</span>)</span></span>;<br>		vector&lt;vector&lt;<span class="hljs-type">int</span>&gt; &gt; ans;<br>		<span class="hljs-comment">// 对于[1,2], [3,4]的情况，本题需要分别输出。</span><br>		<span class="hljs-comment">// 通过对每个区间[L,R]*2，分隔2个区间</span><br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span> ; i &lt; v.<span class="hljs-built_in">size</span>() ; i ++)&#123;<br>			<span class="hljs-type">int</span> l = v[i][<span class="hljs-number">0</span>]*<span class="hljs-number">2</span>;<br>			<span class="hljs-type">int</span> r = v[i][<span class="hljs-number">1</span>]*<span class="hljs-number">2</span>;<br>			diff[l]++;<br>			diff[r<span class="hljs-number">+1</span>]--;<br>		&#125;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span> ; i &lt; diff.<span class="hljs-built_in">size</span>() ; i ++)&#123;<br>			diff[i] += diff[i<span class="hljs-number">-1</span>];<br>		&#125;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span> ; i &lt; diff.<span class="hljs-built_in">size</span>() ; i++)&#123;<br>			<span class="hljs-keyword">if</span>(diff[i] != <span class="hljs-number">0</span>)&#123;<br>				<span class="hljs-type">int</span> j = i<span class="hljs-number">+1</span>;<br>				<span class="hljs-keyword">while</span>(diff[j] != <span class="hljs-number">0</span>) j++;<br>				ans.<span class="hljs-built_in">push_back</span>(&#123;i/<span class="hljs-number">2</span>, (j<span class="hljs-number">-1</span>)/<span class="hljs-number">2</span>&#125;);<br>				i = j;<br>				<span class="hljs-keyword">continue</span>;<br>			&#125;<br>		&#125;<br>		<span class="hljs-keyword">return</span> ans;<br>	&#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
-<p>2）排序</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>	vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt; <span class="hljs-built_in">merge</span>(vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt;&amp; v) &#123;<br>		vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt; ans;<br>		<span class="hljs-built_in">sort</span>(v.<span class="hljs-built_in">begin</span>(), v.<span class="hljs-built_in">end</span>());<br>        <span class="hljs-comment">// 排序后，记录重叠数组即可</span><br>		<span class="hljs-type">int</span> l = v[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>], r = v[<span class="hljs-number">0</span>][<span class="hljs-number">1</span>];<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span> ; i &lt; v.<span class="hljs-built_in">size</span>() ; i ++)&#123;<br>			<span class="hljs-keyword">if</span>(v[i][<span class="hljs-number">0</span>] &lt;= r)&#123;<br>                <span class="hljs-comment">// 若和上一个区间出现重叠，拓展右边界</span><br>				r = <span class="hljs-built_in">max</span>(r, v[i][<span class="hljs-number">1</span>]);<br>			&#125;<span class="hljs-keyword">else</span>&#123; <br>                <span class="hljs-comment">// 否则上一个区间独立，加入ans</span><br>				ans.<span class="hljs-built_in">push_back</span>(&#123;l, r&#125;);<br>				l = v[i][<span class="hljs-number">0</span>]; r = v[i][<span class="hljs-number">1</span>];<br>			&#125;<br>		&#125;<br>		ans.<span class="hljs-built_in">push_back</span>(&#123;l, r&#125;);<br>		<span class="hljs-keyword">return</span> ans;<br>	&#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
-<h2 id="除自身以外数组的乘积">除自身以外数组的乘积</h2>
-<p>给你一个整数数组 <code>nums</code>，返回 数组 <code>answer</code>
-，其中 <code>answer[i]</code> 等于 <code>nums</code> 中除
-<code>nums[i]</code> 之外其余各元素的乘积 。</p>
-<p>题目数据 <strong>保证</strong> 数组
-<code>nums</code>之中任意元素的全部前缀元素和后缀的乘积都在 <strong>32
-位</strong> 整数范围内。</p>
-<p>请 <strong>不要使用除法，</strong>且在 <code>O(n)</code>
-时间复杂度内完成此题。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">productExceptSelf</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums)</span> </span>&#123;<br>		<span class="hljs-function">vector&lt;<span class="hljs-type">int</span> &gt; <span class="hljs-title">pre</span><span class="hljs-params">(nums.size())</span>, <span class="hljs-title">back</span><span class="hljs-params">(nums.size())</span></span>;<br>		vector&lt;<span class="hljs-type">int</span> &gt; ans;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span> ; i &lt; nums.<span class="hljs-built_in">size</span>() ; i ++)&#123;<br>			<span class="hljs-keyword">if</span>(i == <span class="hljs-number">0</span>) pre[i] = nums[i];<br>			<span class="hljs-keyword">else</span> pre[i] = nums[i]*pre[i<span class="hljs-number">-1</span>];<br>		&#125;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = nums.<span class="hljs-built_in">size</span>()<span class="hljs-number">-1</span> ; i &gt;= <span class="hljs-number">0</span> ; i --)&#123;<br>			<span class="hljs-keyword">if</span>(i == nums.<span class="hljs-built_in">size</span>()<span class="hljs-number">-1</span>) back[i] = nums[i];<br>			<span class="hljs-keyword">else</span> back[i] = nums[i]*back[i<span class="hljs-number">+1</span>];<br>		&#125;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span> ; i &lt; nums.<span class="hljs-built_in">size</span>() ; i ++)&#123;<br>			<span class="hljs-type">int</span> l = i == <span class="hljs-number">0</span> ? <span class="hljs-number">1</span> : pre[i<span class="hljs-number">-1</span>];<br>			<span class="hljs-type">int</span> r = i == nums.<span class="hljs-built_in">size</span>()<span class="hljs-number">-1</span> ? <span class="hljs-number">1</span> : back[i<span class="hljs-number">+1</span>];<br>			ans.<span class="hljs-built_in">push_back</span>(l*r);<br>		&#125;<br>		<span class="hljs-keyword">return</span> ans;<br>	&#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+                <h1 id="英语面试常见题整理">英语面试常见题整理</h1>
+<h2 id="自我介绍">1 自我介绍</h2>
+<p>​ Good morning/afternoon, dear professors. It is my honor to be here
+for this interview.</p>
+<p>​ My name is Chen Zhiwei. I am majoring in Software Engineering now.
+And I am going to graduate from China University of Geosciences next
+year. During my past 3-year study in college, I have built up a solid
+foundation of computer science. My research topic is mainly about deep
+learning and program analysis. I used to explore how to use deep
+learning methods for program termination analysis. I think it's an
+interesting but challenging job. Given a program, we need to conduct
+static analysis and attempt to detect a non-termination error from it.
+The most difficult part of this work is how to represent a program as a
+feature graph in a suitable way, so that it contains enough semantic
+information. Thanks to my tutor's guidance, I had a opportunity to
+participate in the experiments and writing of this paper. I really
+appreciate this experience and have learned a lot from it.</p>
+<p>​ In my opinion, I'm a optimistic and determined person. So I am
+willing to achieve a higher goal in next few years. If I am lucky enough
+to be admitted today, I will study hard and participate in the academic
+research of the team. That's all for my self-introduction. Thanks for
+your attention.</p>
+<h2 id="未来规划">2 未来规划</h2>
+<h3 id="do-you-know-our-school-why-do-you-choose-to-study-at-our-school">Do
+you know our school? / Why do you choose to study at our school ？</h3>
+<h3 id="why-do-you-want-to-become-a-postgraduate">Why do you want to
+become a postgraduate ?</h3>
+<h3 id="what-do-you-expect-to-achieve-if-you-are-enrolled-into-this-institute">What
+do you expect to achieve if you are enrolled into this institute ?</h3>
+<h3 id="what-is-your-research-plan">What is your research plan ?</h3>
+<h3 id="do-you-have-a-career-plan-in-5-years">Do you have a career plan
+in 5 years ?</h3>
+<h3 id="how-many-programs-did-you-apply-for-if-we-give-offer-to-you-will-you-accept">How
+many programs did you apply for? If we give offer to you, will you
+accept ?</h3>
+<h3 id="you-can-ask-any-questions-that-you-might-have">You can ask any
+questions that you might have ?</h3>
+<h2 id="项目问题">3 项目问题</h2>
+<h3 id="whats-the-biggest-challenge-problem-in-this-project">What’s the
+biggest challenge / problem in this project ?</h3>
+<h3 id="what-are-the-shortcomings-of-this-project-research">What are the
+shortcomings of this project research ?</h3>
+<h3 id="what-do-you-think-of-artificial-intelligence">What do you think
+of artificial intelligence ?</h3>
+<h2 id="生活日常">4 生活日常</h2>
+<h3 id="tell-me-something-about-your-major.">Tell me something about
+your major.</h3>
+<h3 id="tell-something-about-your-hometown-climate-people.">Tell
+something about your hometown (climate / people).</h3>
+<h3 id="tell-something-about-your-family.">Tell something about your
+family.</h3>
+<h3 id="who-is-your-undergraduate-tutor">Who is your undergraduate tutor
+?</h3>
+<h3 id="which-city-do-you-like-best-and-why">Which city do you like best
+and why ?</h3>
+<h3 id="what-do-you-like-to-do-in-your-spare-time">What do you like to
+do in your spare time ?</h3>
+<h3 id="what-are-your-strengths-and-weaknesses">What are your strengths
+and weaknesses ?</h3>
+<h3 id="whats-your-specialty-what-are-good-at">What’s your specialty? /
+What are good at ?</h3>
+<h2 id="英语学习">4 英语学习</h2>
+<h3 id="how-is-your-english-level">How is your English level ？</h3>
+<h3 id="how-do-you-practice-english">How do you practice English ?</h3>
+<h2 id="套话">5 套话</h2>
+<p>Sorry I cannot hear clearly.</p>
+<p>I don't really understand this one. It's difficult for me to answer
+it.</p>
+<p>Could you please express in a different/simper way?</p>
+<p>Could you please change a question?</p>
 
                 
               </div>
@@ -340,22 +366,8 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E9%A2%98%E8%A7%A3/" class="category-chain-item">题解</a>
+  <a href="/categories/%E5%85%B6%E4%BB%96/" class="category-chain-item">其他</a>
   
-  
-    <span>></span>
-    
-  <a href="/categories/%E9%A2%98%E8%A7%A3/LeetCode/" class="category-chain-item">LeetCode</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/%E9%A2%98%E8%A7%A3/LeetCode/%E7%83%AD%E9%A2%98100/" class="category-chain-item">热题100</a>
-  
-  
-
-  
-
   
 
       </span>
@@ -369,11 +381,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E5%89%8D%E7%BC%80%E5%92%8C/" class="print-no-link">#前缀和</a>
-      
-        <a href="/tags/%E5%B7%AE%E5%88%86/" class="print-no-link">#差分</a>
-      
-        <a href="/tags/LeetCode/" class="print-no-link">#LeetCode</a>
+        <a href="/tags/%E8%8B%B1%E8%AF%AD%E9%9D%A2%E8%AF%95/" class="print-no-link">#英语面试</a>
       
     </div>
   
@@ -385,8 +393,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>LeetCode热题100：前缀和 差分</div>
-      <div>https://czwcugb.github.io/competition/leetcode/hot-100/prefix-diff/</div>
+      <div>英语面试常见题整理</div>
+      <div>https://czwcugb.github.io/other/engLish_presentation/</div>
     </div>
     <div class="license-meta">
       
@@ -398,7 +406,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年5月3日</div>
+          <div>2025年7月9日</div>
         </div>
       
       
@@ -430,18 +438,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/competition/leetcode/hot-100/linked-list/" title="LeetCode热题100：链表">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">LeetCode热题100：链表</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/competition/leetcode/hot-100/double-pointer/" title="LeetCode热题100：双指针">
-                        <span class="hidden-mobile">LeetCode热题100：双指针</span>
+                      <a href="/competition/leetcode/hot-100/others-bits/" title="LeetCode热题100：模拟、位运算">
+                        <span class="hidden-mobile">LeetCode热题100：模拟、位运算</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
